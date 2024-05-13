@@ -1,0 +1,8 @@
+.w-md-75 {
+}
+@media screen and (min-width: 1024px)
+{
+    .w-md-75 {
+        width: 75%!important;
+    }
+}

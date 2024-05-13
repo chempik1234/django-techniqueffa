@@ -1,0 +1,23 @@
+.nav-btn {
+    padding: 10px;
+    margin: 0px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 100%;
+}
+.btn-purple {
+    transition: all .5s;
+    border-bottom: 4px solid transparent;
+}
+.btn-purple:hover {
+    transition: all .5s;
+    border-bottom: none;
+    border-bottom: 4px solid purple;
+}
+.btn-bg-purple {
+    transition: all .2s;
+}
+.btn-bg-purple:hover {
+    background-color: purple;
+    color: white;
+}

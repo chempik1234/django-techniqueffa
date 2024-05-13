@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="row justify-content-center">
+<script src="{% static 'js/imageforms.js' %}"></script>
+<form class="bg-light p-3 my-5 border border-purple w-md-75" action method="{{method}}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if form_needs_images %}
+    {{ formset.management_form }}
+    {% for form in formset %}
+    <div id="image_form_{{forloop.counter0}}" class="image-form">
+        {{ form }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {{ form.media }}
+    {% for field in form %}
+    <div class="form-group">
+        <label for="id_{{fm.name}}">{{field.label}}</label>
+        {{field}}
+        {% if field.errors %}
+         <ul class="list-group">
+          {% for error in field.errors %}
+            <li class="list-group-item list-group-item-action list-group-item-danger my-1">{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endfor %}
+    <div class="row px-3 justify-content-center">
+        <input class="btn btn-success p-2" type="submit" value="Отправить"/>
+        {% block more_buttons %}
+        {% endblock %}
+    </div>
+    {% block bottom_button %}
+    {% endblock %}
+</form>
+</div>
+{% endblock %}

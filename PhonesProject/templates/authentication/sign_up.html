@@ -1,0 +1,10 @@
+{% extends "basic_form.html" %}
+{% load static %}
+{% block more_buttons %}
+<a class="btn btn-outline-info mx-2" href="/sign-in">Войти</a>
+{% endblock %}
+{% block bottom_button %}
+<div class="row justify-content-center">
+    <a class="text-secondary align-self-center" href="/password-reset">забыли пароль?</a>
+</div>
+{% endblock %}

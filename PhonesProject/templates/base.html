@@ -1,0 +1,142 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!--{%for i in styles %}
+    <link rel="stylesheet" type="text/css" href="{%static 'css/'|add:i%}"/>
+    {% endfor %}-->
+    <link rel="stylesheet" type="text/css" href="{%static 'css/lists.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/buttons.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/layouts.css'%}"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/tab_icon.ico' %}"/>
+    <script src="{% static 'js/close_button.js' %}"></script>
+    <script src="{% static 'js/footer.js' %}"></script>
+    <!--<script>
+      function footerf() {
+        const
+          main = document.getElementsByTagName('main')[0],
+          footer = document.getElementsByTagName('footer')[0];
+        main.style.paddingBottom = footer.clientHeight + 'px';
+        console.log("susick");
+      }
+      window.addEventListener('load', footerf);
+      window.addEventListener('resize', footerf);
+    </script>-->
+    <title>{{title}}</title>
+  </head>
+  <body>
+    {% if messages %}
+    <div class="fixed-top w-50 d-sm-block d-none mx-auto toast-container">
+    {% for message in messages %}
+   <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-body">
+        <button type="button" class="ml-2 mb-1 close" aria-label="Close" onclick="close_button_function">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <p>{{message}}</p>
+      </div>
+    </div>
+    {% endfor %}
+      </div>
+    {% endif %}
+    <header>
+      <div class="bg-light d-none d-md-block">
+        <div class="row d-sm-flex w-50 mx-auto py-2">
+            <div class="col">
+                <a href="/support" class="text-secondary font-weight-light">Поддержка и помощь</a>
+            </div>
+            <div class="col">
+                <a href="/support" class="text-secondary font-weight-light">{{company_phone}}</a>
+            </div>
+            <div class="col">
+                <a href="/support" class="text-secondary font-weight-light">О магазине</a>
+            </div>
+        </div>
+      </div>
+      <nav class="navbar-expand-md navbar-light navbar w-md-75 mx-auto">
+          <img src="{% static 'img/logo.png' %}"/>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
+          <div class="navbar-nav mr-auto mr-sm-0">
+            <a class="nav-item nav-btn nav-link active btn-purple" href="/">Главная</a>
+            <a class="nav-item nav-btn nav-link active btn-purple" href="/news">Магазин</a>
+            <div class="nav-item dropdown">
+                <a class="nav-link nav-btn dropdown-toggle active btn-purple" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">О нас</a> <!--my-dropdown-btn -->
+                <div class="dropdown-menu my-dropdown">
+                    <a class="dropdown-item btn-bg-purple" href="/catalogue">Каталог товаров</a>
+                    <a class="dropdown-item btn-bg-purple" href="/my-orders">Мои заказы</a>
+                    <a class="dropdown-item btn-bg-purple" href="/my-account">Мой аккаунт</a>
+                </div>
+            </div>
+            <a class="nav-item nav-btn nav-link active btn-purple" href="/cart">Корзина</a>
+            <a class="nav-item nav-btn nav-link active btn-purple" href="/contacts">Контакты</a>
+            {% if user.is_authenticated %}
+            <form action="/logout" method="post" class="mr-auto my-auto">
+              {% csrf_token %}
+              <input type="submit" class="nav-item nav-btn btn btn-outline-danger p-sm-2" value="Выйти">
+            </form>
+            {% else %}
+              <a class="nav-item nav-btn btn btn-outline-success p-sm-2 mr-auto my-auto" href="/sign-in">Войти</a>
+              <a class="nav-item nav-btn btn btn-outline-success p-sm-2 mr-auto my-auto" href="/sign-up">Зарегистрироваться</a>
+            {% endif %}
+          </div>
+        </div>
+      </nav>
+      <div class="justify-content-end flex-wrap d-flex container">
+          <div class="pictures-list">
+              {% if user.is_authenticated %}
+              <a href="/profile" class="text-secondary pic pic-user">
+                  <p>{{user.get_short_name}}</p>
+              </a>
+              {% else %}
+              <a href="/sign-in" class="text-secondary pic pic-user">
+                  <p>Войти</p>
+              </a>
+              {% endif %}
+              <a href="/cart" class="text-secondary pic pic-bucket">
+                  {% with total_items=cart|length total_price=cart.get_total_price %}
+                  <div class="d-column">
+                      <p>Корзина <span class="badge badge-pill badge-primary">{{total_items}}</span></p>
+                      <p class="text-success font-weight-bold">213{{total_price}} ₽</p>
+                  </div>
+                  {% endwith %}
+              </a>
+          </div>
+          <!--<a href="sign-in" class="d-flex mr-0">
+              <img src="{% static 'img/user.png' %}"/>
+              <p class="text-secondary font-weight-light">Войти</p>
+          </a>-->
+      </div>
+    </header>
+    <div class="container">
+        {% if title_header != "" %}
+        <div class="row justify-content-center">
+            <h1 class="my-2 font-weight-light">{{title_header}}</h1>
+        </div>
+        {% endif %}
+        {% block content %}{% endblock %}
+    </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col">
+            <p class="font-weight-light text-right">2024 Техника</p>
+          </div>
+          <div class="col">
+            <p class="font-weight-light text-left">Сделано на <span class="badge badge-success">django</span> и <span class="badge badge-primary">Bootstrap 4</span></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/PhonesShop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/buttons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/layouts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/lists.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/img/bucket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/img/tab_icon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/img/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/js/imageforms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/sign_in.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/sign_up.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/basic_form.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2gEjG60rq1zgMy4kzPF3FfQutGY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Danis/PycharmProjects/PhonesShop/PhonesProject/staticfiles/js"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Danis\PycharmProjects\PhonesShop\PhonesProject\staticfiles\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Danis\PycharmProjects\PhonesShop\PhonesProject" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="" />
+      <created>1715269531808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715269531808</updated>
+    </task>
+    <servers />
+  </component>
+</project>
