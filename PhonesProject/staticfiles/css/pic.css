@@ -1,0 +1,15 @@
+.pic-user::before {
+    content: url('/static/img/user.png');
+}
+.pic-bucket::before {
+    content: url('/static/img/bucket.png');
+}
+.pic-mail::before {
+    content: url('/static/img/mail.png');
+}
+.pic-phone::before {
+    content: url('/static/img/phone.png');
+}
+.pic-address::before {
+    content: url('/static/img/address.png');
+}

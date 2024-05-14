@@ -18,12 +18,6 @@
     margin: auto 10px auto 0px;
     vertical-align: middle;
 }
-.pic-user::before {
-    content: url('/static/img/user.png');
-}
-.pic-bucket::before {
-    content: url('/static/img/bucket.png');
-}
 /* */
 .error-list li {
     background-color: #e121c2;

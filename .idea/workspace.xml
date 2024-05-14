@@ -5,40 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/PhonesShop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/buttons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/layouts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/lists.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/img/bucket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/img/tab_icon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/img/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/js/imageforms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/sign_in.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/sign_up.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/basic_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/pic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/static_pages/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/static_pages/contacts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/static_pages/support.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/authentication/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/authentication/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/lists.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/lists.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,14 +48,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Danis/PycharmProjects/PhonesShop/PhonesProject/staticfiles/js"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danis/PycharmProjects/PhonesShop/PhonesProject/staticfiles/js&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Danis\PycharmProjects\PhonesShop\PhonesProject\staticfiles\js" />

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="row my-5">
+    <div class="col">
+        <h2 class="pic pic-mail font-weight-normal">Email</h2>
+        <p class="text-secondary">{{company_email}}</p>
+    </div>
+    <div class="col">
+        <h2 class="pic pic-phone font-weight-normal">Телефон</h2>
+        <p class="text-secondary">{{company_phone}}</p>
+    </div>
+    <div class="col">
+        <h2 class="pic pic-address font-weight-normal">Адрес</h2>
+        <p class="text-secondary">{{company_address}}</p>
+    </div>
+</div>
+{% endblock %}

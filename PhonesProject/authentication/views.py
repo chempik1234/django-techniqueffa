@@ -1,5 +1,6 @@
 from django.contrib.auth import login, logout
 from django.contrib import messages
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -9,15 +10,9 @@ from rest_framework.response import Response
 from .forms import SignInForm, SignUpForm
 from .models import User
 
-DEFAULT_CONTEXT = {"title": 'Technique',
-                   "title_header": "",
-                   'company_phone': '+7 967 459 43 58',
-                   'company_email': 'fahrazievdenis97@gmail.com',
-                   'form_needs_images': False}
-
 
 def main_page(request):
-    data = DEFAULT_CONTEXT.copy()
+    data = settings.DEFAULT_CONTEXT.copy()
     data["title_header"] = "Главная"
     return render(request, 'base.html', context=data)
 
@@ -31,7 +26,7 @@ class SignInView(APIView):
             return HttpResponseRedirect('/')
         if form is None:
             form = SignInForm()
-        data_context = DEFAULT_CONTEXT.copy()
+        data_context = settings.DEFAULT_CONTEXT.copy()
         data_context["title_header"] = "Вход"
         data_context["form"] = form
         data_context['method'] = 'post'
@@ -50,7 +45,7 @@ class SignInView(APIView):
         # else:
         #     messages.error(request, post.errors)
         form = post
-        # data_context = DEFAULT_CONTEXT.copy()
+        # data_context = settings.DEFAULT_CONTEXT.copy()
         # data_context["title_header"] = "Вход"
         # data_context["form"] = form
 
@@ -66,7 +61,7 @@ class SignUpView(APIView):
             return HttpResponseRedirect('/')
         if form is None:
             form = SignUpForm()
-        data_context = DEFAULT_CONTEXT.copy()
+        data_context = settings.DEFAULT_CONTEXT.copy()
         data_context["title_header"] = "Регистрация"
         data_context["form"] = form
         data_context['method'] = 'post'
