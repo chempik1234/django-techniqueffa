@@ -4,24 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/static_pages/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/pic.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/static_pages/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/static_pages/contacts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/static_pages/support.html" afterDir="false" />
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="static pages added">
+      <change afterPath="$PROJECT_DIR$/PhonesProject/products/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/products/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/products/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/products/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/products/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/products/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/products/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/authentication/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/authentication/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/lists.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/lists.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/authentication/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/authentication/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/authentication/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +75,19 @@
       <option name="presentableId" value="Default" />
       <updated>1715269531808</updated>
     </task>
+    <task id="LOCAL-00001" summary="static pages added">
+      <option name="closed" value="true" />
+      <created>1715671684192</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715671684192</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="static pages added" />
+    <option name="LAST_COMMIT_MESSAGE" value="static pages added" />
   </component>
 </project>
