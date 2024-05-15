@@ -17,21 +17,18 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, re_path
-from authentication.views import SignInView, SignUpView, logout_view, main_page
+from django.urls import path, re_path, include
 from static_pages.views import contacts_page, support_page, about_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', main_page),
-    # authentication
-    re_path(r'^sign-in', SignInView.as_view()),
-    re_path(r'^sign-up', SignUpView.as_view()),
-    re_path(r'logout', logout_view),
+    path('', include('authentication.urls', namespace='authentication')),
+    path('', include('products.urls', namespace='products')),
     # static pages
     re_path(r'contacts', contacts_page),
     re_path(r'support', support_page),
     re_path(r'about', about_page),
+    # product
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

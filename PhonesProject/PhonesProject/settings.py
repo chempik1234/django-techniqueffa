@@ -144,4 +144,12 @@ DEFAULT_CONTEXT = {"title": 'Technique',
                    'company_phone': '+7 967 459 43 58',
                    'company_email': 'fahrazievdenis97@gmail.com',
                    'company_address': "Республика Башкортостан",
-                   'form_needs_images': False}
+                   'form_needs_images': False,
+                   'categories': {}}
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.getenv("PhonesShopEmail")
+EMAIL_HOST_PASSWORD = os.getenv("PhonesShopEmailPassword")
+EMAIL_USE_TLS = True

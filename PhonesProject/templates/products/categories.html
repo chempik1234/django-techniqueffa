@@ -1,0 +1,14 @@
+{% for category in categories %}
+{% if category.children.all %}
+<div class="btn-group dropright w-100 dropdown-item p-0">
+  <button type="button" id="category-{{category.pk}}" class="dropdown-toggle border-0 btn-bg-to-purple w-100 hover-click-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{category.title}}
+  </button>
+  <div class="dropdown-menu" aria-labelledby="category-{{category.pk}}" x-placement="right-start" style="position: absolute; transform: translate3d(111px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+    {% include 'products/categories.html' with categories=category.children.all %}
+  </div>
+</div>
+{% else %}
+<a class="dropdown-item btn-bg-to-purple" href="/product/in-category/{{category.pk}}">{{category.title}}</a>
+{% endif %}
+{% endfor %}

@@ -7,19 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    crossorigin="anonymous">
     <!--{%for i in styles %}
     <link rel="stylesheet" type="text/css" href="{%static 'css/'|add:i%}"/>
     {% endfor %}-->
+    <link rel="stylesheet" type="text/css" href="{%static 'css/text.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/images.css'%}"/>
     <link rel="stylesheet" type="text/css" href="{%static 'css/pic.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/common.css'%}"/>
     <link rel="stylesheet" type="text/css" href="{%static 'css/lists.css'%}"/>
     <link rel="stylesheet" type="text/css" href="{%static 'css/buttons.css'%}"/>
     <link rel="stylesheet" type="text/css" href="{%static 'css/layouts.css'%}"/>
     <link rel="shortcut icon" type="image/png" href="{% static 'img/tab_icon.ico' %}"/>
-    <script src="{% static 'js/close_button.js' %}"></script>
-    <script src="{% static 'js/footer.js' %}"></script>
     <!--<script>
       function footerf() {
         const
@@ -74,21 +73,21 @@
             <div class="nav-item dropdown">
                 <a class="nav-link nav-btn dropdown-toggle active btn-purple" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">О нас</a> <!--my-dropdown-btn -->
                 <div class="dropdown-menu my-dropdown">
-                    <a class="dropdown-item btn-bg-purple" href="/catalogue">Каталог товаров</a>
-                    <a class="dropdown-item btn-bg-purple" href="/my-orders">Мои заказы</a>
-                    <a class="dropdown-item btn-bg-purple" href="/my-account">Мой аккаунт</a>
+                    <a class="dropdown-item btn-bg-to-purple" href="/catalogue">Каталог товаров</a>
+                    <a class="dropdown-item btn-bg-to-purple" href="/my-orders">Мои заказы</a>
+                    <a class="dropdown-item btn-bg-to-purple" href="/my-account">Мой аккаунт</a>
                 </div>
             </div>
             <a class="nav-item nav-btn nav-link active btn-purple" href="/cart">Корзина</a>
             <a class="nav-item nav-btn nav-link active btn-purple" href="/contacts">Контакты</a>
             {% if user.is_authenticated %}
-            <form action="/logout" method="post" class="mr-auto my-auto">
+            <form action="{% url 'authentication:sign_out' %}" method="post" class="mr-auto my-auto">
               {% csrf_token %}
               <input type="submit" class="nav-item nav-btn btn btn-outline-danger p-sm-2" value="Выйти">
             </form>
             {% else %}
-              <a class="nav-item nav-btn btn btn-outline-success p-sm-2 mr-auto my-auto" href="/sign-in">Войти</a>
-              <a class="nav-item nav-btn btn btn-outline-success p-sm-2 mr-auto my-auto" href="/sign-up">Зарегистрироваться</a>
+              <a class="nav-item nav-btn btn btn-outline-success p-sm-2 mr-auto my-auto" href="{% url 'authentication:sign_in' %}">Войти</a>
+              <a class="nav-item nav-btn btn btn-outline-success p-sm-2 mr-auto my-auto" href="{% url 'authentication:sign_up' %}">Зарегистрироваться</a>
             {% endif %}
           </div>
         </div>
@@ -100,7 +99,7 @@
                   <p>{{user.get_short_name}}</p>
               </a>
               {% else %}
-              <a href="/sign-in" class="text-secondary pic pic-user">
+              <a href="{% url 'authentication:sign_in' %}" class="text-secondary pic pic-user">
                   <p>Войти</p>
               </a>
               {% endif %}
@@ -113,6 +112,7 @@
                   {% endwith %}
               </a>
           </div>
+
           <!--<a href="sign-in" class="d-flex mr-0">
               <img src="{% static 'img/user.png' %}"/>
               <p class="text-secondary font-weight-light">Войти</p>
@@ -120,6 +120,27 @@
       </div>
     </header>
     <div class="container">
+        <div class="row">
+            <div class="col mr-sm-5 dropdown">
+              <button class="btn btn-dark rounded-top dropdown-toggle py-2 px-4"
+                      type="button" id="categoryDropdown" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                Категории
+              </button>
+              <div class="dropdown-menu" aria-labelledby="categoryDropdown" id="category_dropdown_items" role="menu">
+
+              </div>
+            </div>
+            <div class="col">
+                <form action="{% url 'products:search' %}" class="input-group">
+                  <input name="q" type="text" class="form-control" placeholder="Iphone" value="{{q}}" aria-label="">
+                  <div class="input-group-append">
+                    <input type="submit" class="btn btn-bg-purple" value="Найти">
+                  </div>
+                </form>
+            </div>
+
+        </div>
         {% if title_header != "" %}
         <div class="row justify-content-center">
             <h1 class="my-2 font-weight-normal text-secondary">{{title_header}}</h1>
@@ -139,5 +160,9 @@
         </div>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/categories_tree.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   </body>
 </html>

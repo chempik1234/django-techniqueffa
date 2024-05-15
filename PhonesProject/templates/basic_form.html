@@ -3,7 +3,7 @@
 {% block content %}
 <div class="row justify-content-center">
 <script src="{% static 'js/imageforms.js' %}"></script>
-<form class="bg-light p-3 my-5 border border-purple w-md-75" action method="{{method}}" enctype="multipart/form-data">
+<form class="bg-light p-3 my-5 border border-purple w-md-75" action method="{% if method != None %}{{method}}{% else %}post{% endif %}" enctype="multipart/form-data">
     {% csrf_token %}
     {% if form_needs_images %}
     {{ formset.management_form }}
@@ -28,7 +28,7 @@
     </div>
     {% endfor %}
     <div class="row px-3 justify-content-center">
-        <input class="btn btn-success p-2" type="submit" value="Отправить"/>
+        <input class="btn btn-bg-purple p-2" type="submit" value="Отправить"/>
         {% block more_buttons %}
         {% endblock %}
     </div>

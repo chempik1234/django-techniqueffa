@@ -1,0 +1,12 @@
+{% load static %}
+<div class="card border-0 product">
+  {% if product.images.first %}
+    <img class="card-img-top product-img" src="{{product.images.first.image.url}}" alt="Card image cap">
+  {% endif %}
+  <div class="card-body">
+    <h4 class="card-title">{{product.title}}</h4>
+    <div class="d-flex flex-column ml-auto mr-0 justify-content-end">
+      {% include 'products/price.html' with product=product %}
+    </div>
+  </div>
+</div>

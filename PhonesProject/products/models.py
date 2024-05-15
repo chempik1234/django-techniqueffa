@@ -1,22 +1,43 @@
 from django.core.validators import MinValueValidator
 from django.db import models
+from django.utils.html import format_html
 
 
 class Category(models.Model):
     title = models.CharField(max_length=50, blank=False, unique=True, verbose_name="Название категории")
-    parent_category = models.ForeignKey('Category', null=True, blank=True,
+    parent_category = models.ForeignKey('Category', null=True, blank=True, related_name='children',
                                         on_delete=models.SET_NULL, verbose_name="Родительская категория")
+
+    class Meta:
+        verbose_name = "Категория"
+        verbose_name_plural = "Категории"
+
+    def __str__(self):
+        res = self.title
+        if self.parent_category:
+            res += " < " + self.parent_category.__str__()
+        return res
 
 
 class Product(models.Model):
     title = models.CharField(max_length=200, blank=False, null=False, verbose_name="Название")
-    base_price = models.IntegerField(validators=[MinValueValidator(1)], null=False, blank=False,
-                                     verbose_name="Основная цена")
-    actual_price = models.IntegerField(validators=[MinValueValidator(1)], null=False, blank=False,
-                                       verbose_name="Текущая цена с учётом возможных скидок")
+    base_price = models.FloatField(validators=[MinValueValidator(1)], null=False, blank=False,
+                                   verbose_name="Основная цена")
+    actual_price = models.FloatField(validators=[MinValueValidator(1)], null=False, blank=False,
+                                     verbose_name="Текущая цена с учётом возможных скидок")
     description = models.TextField(blank=False, null=False, verbose_name="Описание")
     category = models.ForeignKey('Category', null=True, on_delete=models.SET_NULL, blank=True,
                                  verbose_name="Категория")
+
+    def saving_money(self):
+        return str(round((1 - self.actual_price / self.base_price) * 100, 1)) + " %"
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Продукт"
+        verbose_name_plural = "Продукты"
 
 
 def get_filename(instance, filename):
@@ -28,5 +49,15 @@ def get_filename(instance, filename):
 
 
 class ProductImage(models.Model):
-    product = models.ForeignKey('Product', null=False, on_delete=models.CASCADE, blank=False, verbose_name="Продукт")
+    product = models.ForeignKey('Product', null=False, on_delete=models.CASCADE, blank=False, verbose_name="Продукт",
+                                related_name='images')
     image = models.ImageField(verbose_name="Картинка", null=False, blank=False, upload_to=get_filename)
+
+    def __str__(self):
+        title_html = '<p>{}</p>'
+        image_html = '<img src="{}" style="max-width: 100px; max-height: 100px;" />'
+        return format_html(title_html + image_html, self.product.title, self.image.url)
+
+    class Meta:
+        verbose_name = "Изображение продукта"
+        verbose_name_plural = "Изображения продуктов"

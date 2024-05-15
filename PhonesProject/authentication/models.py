@@ -6,7 +6,7 @@ from django.contrib.auth.models import (
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, email: str, password: str, is_staff: bool = False):
+    def create_user(self, email: str, password: str, is_staff: bool = False, is_superuser: bool = False):
         """
         Creates a new user with given parameters and returns the created model.
         """
@@ -20,7 +20,7 @@ class UserManager(BaseUserManager):
         elif isinstance(password, str) and not password.strip():
             raise ValueError("Exception: empty password.")
 
-        user = self.model(email=email, is_staff=is_staff)
+        user = self.model(email=email, is_staff=is_staff, is_superuser=is_superuser)
         user.set_password(password)
         user.save()
 
@@ -28,7 +28,7 @@ class UserManager(BaseUserManager):
 
     def create_superuser(self, email: str, password: str):
         """ Creates an admin, is_staff is True """
-        user = self.create_user(email, password, True)
+        user = self.create_user(email, password, True, True)
 
         return user
 
@@ -37,6 +37,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(db_index=True, max_length=255, unique=True, verbose_name="Почта", null=False, blank=False)
     password = models.CharField(max_length=255, validators=[MinLengthValidator(8)], verbose_name="Пароль")
     is_staff = models.BooleanField(default=False)
+    is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -45,6 +46,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['password', 'is_staff']
 
     objects = UserManager()
+
+    class Meta:
+        verbose_name = "Пользователь"
+        verbose_name_plural = "Пользователи"
 
     def __str__(self):
         s = ""

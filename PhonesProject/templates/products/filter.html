@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{%static 'css/product.css'%}"/>
+<div class="row d-flex">
+    <div class="col">
+        <p>Найдено {{amount}} шт.</p>
+    </div>
+    <div class="col">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle"
+                  type="button" id="dropdownMenu1" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+            {{ order }}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <a class="dropdown-item" href="{% url 'products:filter' %}?q={{ q }}&category={{ category }}&order=0">Сначала дешёвые</a>
+            <a class="dropdown-item" href="{% url 'products:filter' %}?q={{ q }}&category={{ category }}&order=1">Сначала дорогие</a>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+        <form action="{% url 'products:filter' %}?q={{ q }}&category={{ category }}&order=0" class="form-inline">
+            {{price_form}}
+            <input type="submit" class="btn btn-bg-purple input-group-append" value="Применить">
+        </form>
+    </div>
+</div>
+<div class="cards-container">
+    {% for product_ in products %}
+    {% include 'products/product_card.html' with product=product_ %}
+    {% endfor %}
+</div>
+{% endblock %}

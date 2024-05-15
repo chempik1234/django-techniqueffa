@@ -38,8 +38,8 @@ class SignInView(APIView):
             post.clean()
             email = post.cleaned_data.get('email')
             password = post.cleaned_data.get('password')
-            user = User.objects.get(email=email, password=password)  # authenticate(request, email=password)
-            if user:
+            user = User.objects.get(email=email)  # authenticate(request, email=password)
+            if user and user.check_password(password):
                 login(request, user)
                 return HttpResponseRedirect("/")
         # else:
