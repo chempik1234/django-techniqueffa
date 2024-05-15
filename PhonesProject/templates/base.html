@@ -133,7 +133,7 @@
             </div>
             <div class="col">
                 <form action="{% url 'products:search' %}" class="input-group">
-                  <input name="q" type="text" class="form-control" placeholder="Iphone" value="{{q}}" aria-label="">
+                  <input name="q" type="text" class="form-control" placeholder="Iphone" {% if q %}value="{{q}}"{% endif %} aria-label="">
                   <div class="input-group-append">
                     <input type="submit" class="btn btn-bg-purple" value="Найти">
                   </div>

@@ -6,7 +6,7 @@
     <div class="col">
         <p>Найдено {{amount}} шт.</p>
     </div>
-    <div class="col">
+    <div class="col-md">
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle"
                   type="button" id="dropdownMenu1" data-toggle="dropdown"
@@ -20,9 +20,13 @@
         </div>
     </div>
     <div class="col">
-        <form action="{% url 'products:filter' %}?q={{ q }}&category={{ category }}&order=0" class="form-inline">
-            {{price_form}}
-            <input type="submit" class="btn btn-bg-purple input-group-append" value="Применить">
+        <form action="{% url 'products:filter' %}?q={{ q }}&category={{ category }}&order=0" class="d-flex justify-content-center input-group">
+            {% for field in price_form %}
+            {{field}}
+            {% endfor %}
+            <div class="input-group-append">
+                <input type="submit" class="btn btn-bg-purple" value="Применить">
+            </div>
         </form>
     </div>
 </div>

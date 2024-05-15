@@ -38,7 +38,7 @@
             </div>
             <div class="d-column mx-2">
                 <h4 class="text-uppercase font-weight-light">{{product.title}}</h4>
-                <div class="d-flex">
+                <div class="">
                 {% include 'products/price.html' with product=product %}
                 <form action="/cart-add/" class="w-md-75" method="post">
                     <div class="input-group">
@@ -51,6 +51,7 @@
                 </form>
                 <p class="py-5">Категория: {{product.category}}</p>
             </div>
+        </div>
         </div>
         <div>
             <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">

@@ -4,43 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="just better">
-      <change afterPath="$PROJECT_DIR$/PhonesProject/authentication/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/products/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/products/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/products/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/images.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/product.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/text.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/js/categories_tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/js/zoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/password_reset.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/password_reset_complete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/password_reset_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/password_reset_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/filter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/price.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" afterDir="false" />
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="sus">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/authentication/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/authentication/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/authentication/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/authentication/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/authentication/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/authentication/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/buttons.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/buttons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/layouts.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/layouts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/js/imageforms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/authentication/sign_in.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/sign_in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/authentication/sign_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/authentication/sign_up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/basic_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/basic_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,12 +87,21 @@
       <option name="project" value="LOCAL" />
       <updated>1715673728837</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="sus">
+      <option name="closed" value="true" />
+      <created>1715778648636</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715778648636</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="static pages added" />
     <MESSAGE value="just better" />
-    <option name="LAST_COMMIT_MESSAGE" value="just better" />
+    <MESSAGE value="sus" />
+    <option name="LAST_COMMIT_MESSAGE" value="sus" />
   </component>
 </project>

@@ -3,6 +3,9 @@
 .w-40 {
     width: 40%!important;
 }
+.child-div-w-50 div {
+    width: 50%;
+}
 .cards-container {
     width: 100%;
     display: inline-block;

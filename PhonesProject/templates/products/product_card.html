@@ -4,7 +4,9 @@
     <img class="card-img-top product-img" src="{{product.images.first.image.url}}" alt="Card image cap">
   {% endif %}
   <div class="card-body">
-    <h4 class="card-title">{{product.title}}</h4>
+    <a class="card-title text-dark text-decoration-none" href="{% url 'products:product' product.id %}">
+      <h4 class="card-title">{{product.title}}</h4>
+    </a>
     <div class="d-flex flex-column ml-auto mr-0 justify-content-end">
       {% include 'products/price.html' with product=product %}
     </div>

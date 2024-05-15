@@ -28,10 +28,10 @@ ProductImageFormSet = inlineformset_factory(
 
 class PriceForm(forms.Form):
     price_min = forms.FloatField(label="", min_value=0, max_value=999999,
-                                 widget=forms.NumberInput(attrs={'class': 'form-control mr-1',
+                                 widget=forms.NumberInput(attrs={'class': 'form-control',
                                                                  'placeholder': '≥ 0.00'}))
     price_max = forms.FloatField(label="", min_value=0, max_value=999999,
-                                 widget=forms.NumberInput(attrs={'class': 'form-control mr-1',
+                                 widget=forms.NumberInput(attrs={'class': 'form-control',
                                                                  'placeholder': '≤ 0.00'}))
 
     def clean_price_max(self):

@@ -9,6 +9,6 @@
   </div>
 </div>
 {% else %}
-<a class="dropdown-item btn-bg-to-purple" href="/product/in-category/{{category.pk}}">{{category.title}}</a>
+<a class="dropdown-item btn-bg-to-purple" href="{% url 'products:filter' %}?category={{category.id}}">{{category.title}}</a>
 {% endif %}
 {% endfor %}
