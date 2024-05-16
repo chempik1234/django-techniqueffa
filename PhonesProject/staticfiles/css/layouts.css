@@ -1,5 +1,6 @@
 .w-md-75 {
 }
+.mw-md-75 {}
 .w-40 {
     width: 40%!important;
 }
@@ -17,9 +18,28 @@
 		gap: 10px;
     }
 }
-@media screen and (min-width: 1024px)
+.container {
+    max-width: 1400px!important;
+}
+@media screen and (min-width: 768px)
 {
     .w-md-75 {
         width: 75%!important;
     }
+    .mw-md-75 {
+        max-width: 75%!important;
+    }
+}
+footer {
+    width: 100%;
+    /* top: 105%; */
+}
+.left-top {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.pic-button {
+    width: 40px;
+    height: 50px;
 }

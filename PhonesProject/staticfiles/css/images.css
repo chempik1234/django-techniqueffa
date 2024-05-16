@@ -2,6 +2,10 @@
   max-height: 100px;
   width: auto;
 }
+.h-50px {
+    max-height: 50px;
+    width: auto;
+}
 .main-image {
     position: absolute;
     width: auto;

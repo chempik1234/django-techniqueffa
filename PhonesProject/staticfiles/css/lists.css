@@ -15,7 +15,7 @@
 .pic::before {
     display: inline-block;
     width: 30px;
-    margin: auto 10px auto 0px;
+    margin: auto 1px auto 0px;
     vertical-align: middle;
 }
 /* */

@@ -145,7 +145,8 @@ DEFAULT_CONTEXT = {"title": 'Technique',
                    'company_email': 'fahrazievdenis97@gmail.com',
                    'company_address': "Республика Башкортостан",
                    'form_needs_images': False,
-                   'categories': {}}
+                   'categories': {},
+                   'bg_color': 'white'}
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

@@ -1,0 +1,5 @@
+<div class="my-1 p-2 bg-light">
+    <h4 class="font-weight-light">{% if review.author != None %}{{review.author.get_short_name}}{% else %}<span class="text-danger">Аккаунт удалён</span>{% endif %}</h4>
+    {% include 'products/rate.html' with product=review.product %}
+    <p class="mt-2">{{review.text}}</p>
+</div>

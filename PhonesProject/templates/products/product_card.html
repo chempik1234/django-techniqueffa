@@ -1,14 +1,36 @@
 {% load static %}
 <div class="card border-0 product">
+  <div class="product-img">
   {% if product.images.first %}
+    <a href="{% url 'products:product' product.id %}">
     <img class="card-img-top product-img" src="{{product.images.first.image.url}}" alt="Card image cap">
+    </a>
   {% endif %}
+    <div class="left-top flex-column">
+      <button type="button" class="btn-bg-purple border-0 rounded-circle" data-toggle="modal" data-target="#exampleModalCentered">
+        <span class="arial lh-2 pic-button d-block">👁</span>
+      </button>
+      {% if product.actual_price < product.base_price %}<span class="btn-bg-purple p-1">Распродажа</span>{% endif %}
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered mw-md-75" role="document">
+        <div class="modal-content">
+          {% include 'products/details.html' with product=product %}
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="card-body">
     <a class="card-title text-dark text-decoration-none" href="{% url 'products:product' product.id %}">
       <h4 class="card-title">{{product.title}}</h4>
     </a>
+    {% include 'products/rate.html' with product=product %}
     <div class="d-flex flex-column ml-auto mr-0 justify-content-end">
       {% include 'products/price.html' with product=product %}
     </div>
   </div>
+
 </div>

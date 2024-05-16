@@ -31,6 +31,18 @@
     background-color: purple;
     transition: all .2s;
 }
+.btn-outline-purple {
+    color: #D452F2;
+    background-color: white;
+    border: 1px solid #D452F2;
+    transition: all .2s;
+}
+.btn-outline-purple:hover {
+    color: white;
+    background-color: #D452F2;
+    border: none;
+    transition: all .2s;
+}
 .nav-link.purple-nav-link.active {
     color: white!important;
     background-color: #D452F2!important;

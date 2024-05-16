@@ -1,0 +1,48 @@
+{% load static %}
+<div class="d-md-inline-flex d-block">
+    <div class="product-image-gallery">
+      <div class="image-zoom-container bg-light">
+          <img id="main-image-{{product.pk}}" class="main-image" src="" alt="Main Product Image"/>
+      </div>
+      <div class="thumbnails-{{product.pk}}"></div>
+      <script src="{% static 'js/zoom.js' %}"></script>
+      <script>
+          const mainImage = document.getElementById('main-image-{{product.pk}}');
+          const thumbnailsContainer = document.querySelector('.thumbnails-{{product.pk}}');
+          const productImages = {{ product.product_images|safe }};
+
+          function updateMainImage(imageUrl) {
+            mainImage.src = imageUrl;
+            mainImage.style.width = zoomContainer.clientWidth + 'px';
+          }
+
+          productImages.forEach(image_element => {
+            const thumbnail = document.createElement('img');
+            thumbnail.src = image_element.image;
+            thumbnail.classList.add('thumbnail');
+            thumbnail.addEventListener('click', () => {
+              updateMainImage(image_element.image);
+            });
+            thumbnailsContainer.appendChild(thumbnail);
+          });
+
+          if (productImages.length > 0) {
+            updateMainImage(productImages[0].image);
+          }
+      </script>
+    </div>
+    <div class="d-column mx-2">
+        <h4 class="text-uppercase font-weight-light">{{product.title}}</h4>
+        {% include 'products/price.html' with product=product %}
+        <form action="/cart-add/" class="w-md-75" method="post">
+            <div class="input-group">
+                <input type="hidden" name="product_id" id="id_product_id" value="{{product.pk}}">
+                <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="amount" id="id_amount" value="1">
+                <div class="input-group-append">
+                    <input type="submit" class="btn btn-bg-purple" value="В корзину">
+                </div>
+            </div>
+        </form>
+        <p class="py-5">Категория: {{product.category}}</p>
+    </div>
+</div>

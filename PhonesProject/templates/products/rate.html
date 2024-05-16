@@ -1,0 +1,11 @@
+{% load filters %}
+{% if product.get_rate != None %}
+<div class="rating-result">
+    <!--0|in_range:product.get_rate-->
+    {% for i in 1|in_range:5 %}
+	<span class="{{ i|get_rating_class:product.get_rate }}"></span>
+    {% endfor %}
+</div>
+{% else %}
+<p class="font-weight-bold">Нет оценок</p>
+{% endif %}

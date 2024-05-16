@@ -1,58 +1,10 @@
 {% extends "base.html" %}
+{% load filters %}
 {% load static %}
 {% block content %}
 <div class="d-lg-inline-flex d-column my-5 py-2" xmlns="http://www.w3.org/1999/html">
     <div class="col flex-shrink-1">
-        <div class="d-md-inline-flex d-block">
-            <div class="product-image-gallery">
-              <div class="image-zoom-container bg-light">
-                  <img id="main-image" class="main-image" src="" alt="Main Product Image">
-              </div>
-              <div class="thumbnails">
-              </div>
-              <script src="{% static 'js/zoom.js' %}"></script>
-              <script>
-                  const mainImage = document.getElementById('main-image');
-                  const thumbnailsContainer = document.querySelector('.thumbnails');
-                  const productImages = {{ product_images|safe }};
-
-                  function updateMainImage(imageUrl) {
-                    mainImage.src = imageUrl;
-                    mainImage.style.width = zoomContainer.clientWidth + 'px';
-                  }
-
-                  if (productImages.length > 0) {
-                    updateMainImage(productImages[0].image);
-                  }
-
-                  productImages.forEach(image_element => {
-                    const thumbnail = document.createElement('img');
-                    thumbnail.src = image_element.image;
-                    thumbnail.classList.add('thumbnail');
-                    thumbnail.addEventListener('click', () => {
-                      updateMainImage(image_element.image);
-                    });
-                    thumbnailsContainer.appendChild(thumbnail);
-                  });
-              </script>
-            </div>
-            <div class="d-column mx-2">
-                <h4 class="text-uppercase font-weight-light">{{product.title}}</h4>
-                <div class="">
-                {% include 'products/price.html' with product=product %}
-                <form action="/cart-add/" class="w-md-75" method="post">
-                    <div class="input-group">
-                        <input type="hidden" name="product_id" id="id_product_id" value="{{product.pk}}">
-                        <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="amount" id="id_amount" value="1">
-                        <div class="input-group-append">
-                            <input type="submit" class="btn btn-bg-purple" value="В корзину">
-                        </div>
-                    </div>
-                </form>
-                <p class="py-5">Категория: {{product.category}}</p>
-            </div>
-        </div>
-        </div>
+        {% include 'products/details.html' with product=product %}
         <div>
             <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
               <li class="nav-item">
@@ -67,12 +19,52 @@
                   <h3 class="my-4">Описание</h3>
                   <p>{{product.description}}</p>
               </div>
-              <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">...</div>
+              <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                  <div class="d-column mt-2"> <!-- reviews div -->
+                    {% if user.is_authenticated %}
+                    {% if your_review == None %}
+                    <form action="{% url 'products:add_review' product.id %}" method="post" class="p-2">
+                        {% csrf_token %}
+                      <div class="rating-bar">
+                        {% for i in 1|in_range:5 %}
+	                    <input type="radio" id="id_rate_{{i}}" name="rate" value="{{i}}">
+	                    <label for="id_rate_{{i}}" title='Оценить на "{{i}}"'></label>
+                        {% endfor %}
+                      </div>
+
+                        {{review_form.text}}
+                        <input type="hidden" name="product_id" value="{{product.id}}"/>
+                        {% for field in review_form %}
+                          {% if field.errors %}
+                           <ul class="list-group">
+                            {% for error in field.errors %}
+                              <li class="list-group-item list-group-item-action list-group-item-danger my-1">{{ error }}</li>
+                            {% endfor %}
+                          </ul>
+                          {% endif %}
+                        {% endfor %}
+                        <input type="submit" class="btn btn-outline-purple mt-2" value="Отправить"/>
+                    </form>
+                    {% else %}
+                    <form action="{% url 'products:delete_review' product.id %}" method="post">
+                        {% csrf_token %}
+                        <input type="submit" value="Удалить свой отзыв" class="btn btn-danger"/>
+                    </form>
+                    {% endif %}
+                    {% else %}
+                    <a class="btn btn-outline-purple" href="{% url 'authentication:sign_in' %}">Войти</a>
+                    {% endif %}
+
+                      {% for review in product.reviews.all %}
+                      {% include 'products/review.html' with review=review %}
+                      {% endfor %}
+                  </div>
+              </div>
             </div>
         </div>
     </div>
-    <div class="d-sm-column d-none flex-shrink-1 px-3 my-2">
-        <h4 class="mb-3">Продукты</h4>
+    <div class="d-none d-md-block flex-shrink-1 px-3 my-2 mr-0">
+        {% include 'products/side_lists.html' with side_lists=side_lists %}
         <!--<form action="/search">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="q" id="id_q">

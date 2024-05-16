@@ -11,6 +11,7 @@
     <!--{%for i in styles %}
     <link rel="stylesheet" type="text/css" href="{%static 'css/'|add:i%}"/>
     {% endfor %}-->
+    <link rel="stylesheet" type="text/css" href="{%static 'css/rating_bar.css'%}"/>
     <link rel="stylesheet" type="text/css" href="{%static 'css/text.css'%}"/>
     <link rel="stylesheet" type="text/css" href="{%static 'css/images.css'%}"/>
     <link rel="stylesheet" type="text/css" href="{%static 'css/pic.css'%}"/>
@@ -19,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="{%static 'css/buttons.css'%}"/>
     <link rel="stylesheet" type="text/css" href="{%static 'css/layouts.css'%}"/>
     <link rel="shortcut icon" type="image/png" href="{% static 'img/tab_icon.ico' %}"/>
+    <script src="{% static 'js/footer.js' %}"></script>
     <!--<script>
       function footerf() {
         const
@@ -34,18 +36,20 @@
   </head>
   <body>
     {% if messages %}
-    <div class="fixed-top w-50 d-sm-block d-none mx-auto toast-container">
+    <div class="d-flex">
+    <div class="fixed-top w-100 toast-container">
     {% for message in messages %}
-   <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+   <div class="toast fade show mx-auto" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-body">
-        <button type="button" class="ml-2 mb-1 close" aria-label="Close" onclick="close_button_function">
+        <button type="button" class="ml-2 mb-1 close" aria-label="Close" onclick="close_button_function(this)">
           <span aria-hidden="true">&times;</span>
         </button>
-          <p>{{message}}</p>
+          <p class="fort-weight-bold lh-2">{{message}}</p>
       </div>
     </div>
     {% endfor %}
       </div>
+        </div>
     {% endif %}
     <header>
       <div class="bg-light d-none d-md-block">
@@ -61,19 +65,18 @@
             </div>
         </div>
       </div>
-      <nav class="navbar-expand-md navbar-light navbar w-md-75 mx-auto">
+      <nav class="navbar-expand-md navbar-light navbar w-md-75 mx-auto" id="main-nav">
           <img src="{% static 'img/logo.png' %}"/>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
           <div class="navbar-nav mr-auto mr-sm-0">
-            <a class="nav-item nav-btn nav-link active btn-purple" href="/">Главная</a>
-            <a class="nav-item nav-btn nav-link active btn-purple" href="/news">Магазин</a>
+            <a class="nav-item nav-btn nav-link active btn-purple" href="{% url 'products:main_page' %}">Главная</a>
             <div class="nav-item dropdown">
-                <a class="nav-link nav-btn dropdown-toggle active btn-purple" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">О нас</a> <!--my-dropdown-btn -->
+                <a class="nav-link nav-btn dropdown-toggle active btn-purple" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Магазин</a> <!--my-dropdown-btn -->
                 <div class="dropdown-menu my-dropdown">
-                    <a class="dropdown-item btn-bg-to-purple" href="/catalogue">Каталог товаров</a>
+                    <a class="dropdown-item btn-bg-to-purple" href="{% url 'products:filter' %}">Каталог товаров</a>
                     <a class="dropdown-item btn-bg-to-purple" href="/my-orders">Мои заказы</a>
                     <a class="dropdown-item btn-bg-to-purple" href="/my-account">Мой аккаунт</a>
                 </div>
@@ -119,6 +122,7 @@
           </a>-->
       </div>
     </header>
+    <div class="bg-{{bg_color}} py-3">
     <div class="container">
         <div class="row">
             <div class="col mr-sm-5 dropdown">
@@ -132,21 +136,22 @@
               </div>
             </div>
             <div class="col">
-                <form action="{% url 'products:search' %}" class="input-group">
+                <form action="{% url 'products:filter' %}" class="input-group">
                   <input name="q" type="text" class="form-control" placeholder="Iphone" {% if q %}value="{{q}}"{% endif %} aria-label="">
                   <div class="input-group-append">
-                    <input type="submit" class="btn btn-bg-purple" value="Найти">
+                    <input type="submit" class="btn btn-bg-purple arial" value="Найти">
                   </div>
                 </form>
             </div>
 
         </div>
-        {% if title_header != "" %}
+        {% if title_header != "" and title_header != None %}
         <div class="row justify-content-center">
             <h1 class="my-2 font-weight-normal text-secondary">{{title_header}}</h1>
         </div>
         {% endif %}
         {% block content %}{% endblock %}
+    </div>
     </div>
     <footer class="page-footer">
       <div class="container">
@@ -160,6 +165,7 @@
         </div>
       </div>
     </footer>
+    <script src="{% static 'js/close_button.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static 'js/categories_tree.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>

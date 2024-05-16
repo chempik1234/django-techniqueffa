@@ -2,9 +2,9 @@
 {% load static %}
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{%static 'css/product.css'%}"/>
-<div class="row d-flex">
+<div class="row d-flex my-3">
     <div class="col">
-        <p>Найдено {{amount}} шт.</p>
+        <p>{% if amount > 0 %}Найдено {{amount}} шт.{% else %}Ничего не найдено{% endif %}</p>
     </div>
     <div class="col-md">
         <div class="dropdown">
@@ -14,13 +14,16 @@
             {{ order }}
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <a class="dropdown-item" href="{% url 'products:filter' %}?q={{ q }}&category={{ category }}&order=0">Сначала дешёвые</a>
-            <a class="dropdown-item" href="{% url 'products:filter' %}?q={{ q }}&category={{ category }}&order=1">Сначала дорогие</a>
+            <a class="dropdown-item" href="{% url 'products:filter' %}?{% if q != None %}q={{ q }}&{% endif %}category={{ category }}&order=0">Сначала дешёвые</a>
+            <a class="dropdown-item" href="{% url 'products:filter' %}?{% if q != None %}q={{ q }}&{% endif %}category={{ category }}&order=1">Сначала дорогие</a>
           </div>
         </div>
     </div>
     <div class="col">
-        <form action="{% url 'products:filter' %}?q={{ q }}&category={{ category }}&order=0" class="d-flex justify-content-center input-group">
+        <form action="{% url 'products:filter' %}?{% if q != None %}q={{ q }}&{% endif %}category={{ category }}" class="d-flex justify-content-center input-group">
+            {% if category != None %}<input type="hidden" name="category" value="{{category}}"/>{% endif %}
+            {% if order_num != None %}<input type="hidden" name="order" value="{{order_num}}"/>{% endif %}
+            {% if q != None %}<input type="hidden" name="q" value="{{q}}"/>{% endif %}
             {% for field in price_form %}
             {{field}}
             {% endfor %}
@@ -30,9 +33,14 @@
         </form>
     </div>
 </div>
-<div class="cards-container">
-    {% for product_ in products %}
-    {% include 'products/product_card.html' with product=product_ %}
-    {% endfor %}
+<div class="d-flex">
+    <div class="cards-container">
+        {% for product_ in products %}
+        {% include 'products/product_card.html' with product=product_ %}
+        {% endfor %}
+    </div>
+    <div class="d-none d-md-block flex-shrink-1 px-3 my-2 mr-0">
+        {% include 'products/side_lists.html' with side_lists=side_lists %}
+    </div>
 </div>
 {% endblock %}

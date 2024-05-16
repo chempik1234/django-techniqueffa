@@ -4,3 +4,9 @@
 .text-striked {
     text-decoration: line-through;
 }
+.arial {
+    font-family: Arial;
+}
+.lh-2 {
+    font-size: 200%;
+}

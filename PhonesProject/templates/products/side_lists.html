@@ -1,0 +1,10 @@
+{% for list_name, list in side_lists.items %}
+<div class="bg-white p-3">
+    <h4 class="font-weight-normal">{{list_name}}</h4>
+    <div class="d-column">
+        {% for product_listed in list %}
+            {% include 'products/product_bar.html' with product=product_listed %}
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}

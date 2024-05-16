@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{%static 'css/product.css'%}"/>
+<div class="row mt-2">
+    <div class="p-2 d-none d-md-block">
+        {% include 'products/side_lists.html' with side_lists=side_lists %}
+    </div>
+    <div class="col">
+        <div class="p-2 bg-white">
+            <div class="row">
+                <div class="col mr-3">
+                    <h5 class="pic pic-truck">Бесплатная доставка</h5>
+                </div>
+                <div class="col mx-3">
+                    <h5 class="pic pic-headphones">24x7 поддержка</h5>
+                </div>
+                <div class="col mx-3">
+                    <h5 class="pic pic-refund">Легкий возврат</h5>
+                </div>
+                <div class="col ml-3">
+                    <h5 class="pic pic-payment">Безопасный платеж</h5>
+                </div>
+            </div>
+        </div>
+        {% for list_name, list in side_lists.items %}
+        <div class="p-2 bg-white mt-3">
+            <h4 class="font-weight-bold">{{list_name}}</h4>
+            <div class="cards-container">
+            {% for product in list %}
+                {% include 'products/product_card.html' with product=product %}
+            {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

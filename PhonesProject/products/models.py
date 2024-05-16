@@ -1,6 +1,9 @@
-from django.core.validators import MinValueValidator
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.utils.html import format_html
+from django.db.models import Avg
+
+from rest_framework import serializers
 
 
 class Category(models.Model):
@@ -28,6 +31,17 @@ class Product(models.Model):
     description = models.TextField(blank=False, null=False, verbose_name="Описание")
     category = models.ForeignKey('Category', null=True, on_delete=models.SET_NULL, blank=True,
                                  verbose_name="Категория")
+
+    def get_rate(self):
+        average_rate = self.reviews.all().aggregate(avg_rate=Avg('rate'))['avg_rate']
+        if average_rate is not None:
+            return round(average_rate, 1)
+
+    def get_reviews_amount(self):
+        return self.reviews.all().count()
+
+    def product_images(self):
+        return ProductImageSerializer(self.images.all(), many=True).data
 
     def saving_money(self):
         return str(round((1 - self.actual_price / self.base_price) * 100, 1)) + " %"
@@ -61,3 +75,27 @@ class ProductImage(models.Model):
     class Meta:
         verbose_name = "Изображение продукта"
         verbose_name_plural = "Изображения продуктов"
+
+
+class ProductImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductImage
+        fields = ['image']
+
+
+class Review(models.Model):
+    product = models.ForeignKey('Product', null=False, blank=False, on_delete=models.CASCADE, verbose_name="Продукт",
+                                related_name="reviews")
+    text = models.TextField(null=False, blank=True, verbose_name="Текст")
+    rate = models.IntegerField(null=False, blank=False, validators=[MinValueValidator(1), MaxValueValidator(5)],
+                               verbose_name="Оценка")
+    author = models.ForeignKey('authentication.User', null=True, blank=False, on_delete=models.SET_NULL,
+                               verbose_name="Автор")
+
+    def __str__(self):
+        return "Отзыв на " + self.product.title + "; оценка: " + str(self.rate)
+
+    class Meta:
+        verbose_name = "Отзыв"
+        verbose_name_plural = "Отзывы"
+        unique_together = ('author', 'product')

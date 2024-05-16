@@ -5,10 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="sus">
+      <change afterPath="$PROJECT_DIR$/PhonesProject/products/product_list_selectors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/products/templatetags/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/rating_bar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/js/close_button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/js/footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/main_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product_bar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/rate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/review.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhonesProject/templates/products/side_lists.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhonesProject/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/products/serializers.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PhonesProject/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/buttons.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/buttons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/images.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/images.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/layouts.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/layouts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/pic.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/pic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/text.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/text.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/img/bucket.png" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/img/bucket.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/img/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/img/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/js/categories_tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/js/categories_tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/filter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" afterDir="false" />
@@ -95,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715778648636</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="sus">
+      <option name="closed" value="true" />
+      <created>1715788860682</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715788860682</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
