@@ -2,7 +2,7 @@
 # Install pip first
 # echo "Installing pip..."
 # sudo apt install python3-pip
-
+python --version
 # Update pip
 echo "Updating pip..."
 python3.12 pip install -U pip
