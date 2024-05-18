@@ -13,7 +13,7 @@
             "src": "build.sh",
             "use":"@vercel/static-build",
             "config":{
-                "distDir": "staticfiles"
+                "distDir": "static_build"
             }
         }
     ],
@@ -24,7 +24,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "project_name/wsgi.py"
+            "dest": "PhonesProject/wsgi.py"
         }
     ]
 }
