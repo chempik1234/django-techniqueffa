@@ -1,0 +1,35 @@
+.product {
+    margin: 7px;
+    padding: 10px;
+    /* display: grid; */
+    /*height: 100%;
+    width: 100%;*/
+}
+
+.product-img {
+    width: 100%;
+    horizontal-align: center;
+    vertical-align: center;
+}
+@media screen and (min-width: 576px){
+    /*.product-img {
+        max-height: 300px;
+        max-width: 300px;
+        width: auto;
+    }*/
+    .product {max-width: 250px}
+}
+
+.round-span-number {
+    position: absolute;
+    left: -20px;
+    text-align: center;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid gray;
+    outline: 2px solid white;
+    background-color: white;
+    color: gray;
+    border-radius: 50%;
+}
