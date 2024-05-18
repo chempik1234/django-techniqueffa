@@ -90,14 +90,18 @@ WSGI_APPLICATION = 'PhonesProject.wsgi.app'
 #     }
 # }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("POSTGRES_DATABASE"),
-        'USER': os.getenv("POSTGRES_USER"),
-        'PASSWORD': os.getenv("POSTGRES_PASSWORD"),
-        'HOST': os.getenv("POSTGRES_HOST"),
-        'PORT': '5432',
-    }
+   # 'default': {
+   #     'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': BASE_DIR / 'db.sqlite3',
+   # }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': os.getenv("POSTGRES_DATABASE"),
+       'USER': os.getenv("POSTGRES_USER"),
+       'PASSWORD': os.getenv("POSTGRES_PASSWORD"),
+       'HOST': os.getenv("POSTGRES_HOST"),
+       'PORT': '5432',
+   }
 }
 
 
@@ -136,13 +140,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "staticfiles"),
-]
-STATIC_DIRS = [
-    os.path.join(BASE_DIR, "staticfiles"),
-]
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "staticfiles"),
+# ]
+# STATIC_DIRS = [
+#     os.path.join(BASE_DIR, "staticfiles"),
+# ]
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
