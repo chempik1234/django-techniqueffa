@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="dsakjdhsahdasj!!!!!">
-      <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/vercel.json" afterDir="false" />
-    </list>
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="findstatic" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -256,7 +253,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716059687159</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="..?">
+      <option name="closed" value="true" />
+      <created>1716059954790</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1716059954790</updated>
+    </task>
+    <task id="LOCAL-00022" summary="findstatic">
+      <option name="closed" value="true" />
+      <created>1716060122508</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716060122508</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,6 +299,8 @@
     <MESSAGE value="oof" />
     <MESSAGE value="more changess!" />
     <MESSAGE value="dsakjdhsahdasj!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="dsakjdhsahdasj!!!!!" />
+    <MESSAGE value="..?" />
+    <MESSAGE value="findstatic" />
+    <option name="LAST_COMMIT_MESSAGE" value="findstatic" />
   </component>
 </project>
