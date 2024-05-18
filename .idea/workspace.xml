@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="oof">
-      <change afterPath="$PROJECT_DIR$/PhonesProject/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="more changess!">
+      <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhonesProject/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/vercel.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +217,31 @@
       <option name="project" value="LOCAL" />
       <updated>1716058997050</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="oof">
+      <option name="closed" value="true" />
+      <created>1716059291579</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1716059291579</updated>
+    </task>
+    <task id="LOCAL-00017" summary="oof">
+      <option name="closed" value="true" />
+      <created>1716059461789</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1716059461789</updated>
+    </task>
+    <task id="LOCAL-00018" summary="oof">
+      <option name="closed" value="true" />
+      <created>1716059540187</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1716059540187</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,6 +269,7 @@
     <MESSAGE value="youtube tutorial" />
     <MESSAGE value="more changes!" />
     <MESSAGE value="oof" />
-    <option name="LAST_COMMIT_MESSAGE" value="oof" />
+    <MESSAGE value="more changess!" />
+    <option name="LAST_COMMIT_MESSAGE" value="more changess!" />
   </component>
 </project>
