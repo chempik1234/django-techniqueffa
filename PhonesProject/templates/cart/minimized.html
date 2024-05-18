@@ -1,0 +1,28 @@
+{% load multiply_filters %}
+<div class="p-2">
+    <h4>Корзина</h4>
+    {% if not cart.is_empty %}
+    {% include 'cart/clear_form.html' %}
+{% for item in cart %}
+    <div class="border border-secondary border-bottom-0 border-left-0 border-right-0 mt-2">
+        <p><span class="text-purple">{{item.1.0.actual_price}} ₽</span> x {{item.1.1}}</p>
+        {% if item.1.0.actual_price < item.1.0.base_price %}
+        <p class="text-success font-weight-bold">Экономия {{item.1.0.save_money|multiply:item.1.1}} ₽</p>
+        {% endif %}
+        <div class="row w-100">
+            <a href="{% url 'products:product' item.0 %}" class="col text-decoration-none text-dark">
+                <p>{{item.1.0.title}}</p>
+            </a>
+            {% if item.1.0.images.exists %}
+            <img class="h-50px ml-2" src="{{item.1.0.images.first.image.url}}"/>
+            {% endif %}
+            {% include 'cart/delete_form.html' with pk=item.0 %}
+        </div>
+    </div>
+
+<!--% include 'products/product_bar.html' with product=item.1.0 %-->
+{% endfor %}
+    {% else %}
+    <p class="text-danger">Пустая корзина</p>
+    {% endif %}
+</div>

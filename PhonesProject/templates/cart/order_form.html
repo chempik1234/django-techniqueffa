@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row mt-5">
+    <div class="col-sm-8 col">
+        <form method="post">
+            {% csrf_token %}
+            <div class="counter-div">
+                <div>
+                    <h5>Контактная информация</h5>
+                    <div class="">
+                        {{email_form}}
+                    </div>
+                    <p>Если не напишите email, то свяжемся с вами по другому адресу: <strong>{{user.email}}</strong></p>
+                </div>
+                <div>
+                    <h5>Адрес доставки</h5>
+                    <p>Введите адрес, по которому надо доставить ваш заказ.</p>
+                    <p>Адрес: <span id="addressSpan"></span></p>
+                    <div>
+                        <!--<form action="{% url 'cart:order_form' %}">-->
+                        {{shipping_form}}
+                            <script src="{% static 'js/address_form.js' %}"></script>
+                            <button id="addressFormButton" class="btn btn-bg-purple mt-1">Обновить</button>
+                        <!--</form>-->
+                    </div>
+                    <div class="custom-control custom-checkbox checkbox-checked-show-input w-100">
+                        <input type="checkbox" class="custom-control-input" id="id_billing_use_billing" checked>
+                        <label class="custom-control-label" for="id_billing_use_billing">Использовать этот же адрес для выставления счетов</label>
+                        <div id="billingDiv">
+                        {{billing_form}}
+                        </div>
+                        <script src="{% static 'js/use_billing.js' %}"></script>
+                    </div>
+                </div>
+                <div>
+                    <h5>Параметры доставки</h5>
+                    <div class="d-flex">
+                        <p class="mr-auto">Free shipping</p>
+                        <p class="ml-auto">0,00 ₽</p>
+                    </div>
+                </div>
+                <div>
+                    <h5>Способы оплаты</h5>
+                    <div>
+                        <fieldset>
+                            <div id="id_payment_type" class="list-group">
+                                {% for error in payment_form.payment_type.errors%}
+                                <div class="list-group-item">
+                                    <p class="text-danger">{{error}}</p>
+                                </div>
+                                {% endfor %}
+                                <div class="list-group-item radio-checked-show-p">
+                                    <label for="id_payment_type_0">
+                                        <input type="radio" name="payment_type" value="False" required checked id="id_payment_type_0">
+                                        Оплатить сейчас банковским переводом
+                                        <p>Оплату нужно направлять на наш банковский счет. Заказ будет отправлен после поступления средств на наш счёт. Указывайте номер заказа в подписи к платежу.</p>
+                                    </label>
+                                </div>
+                                <div class="list-group-item radio-checked-show-p">
+                                    <label for="id_payment_type_1">
+                                        <input type="radio" name="payment_type" value="True" required id="id_payment_type_1">
+                                        Оплатить при получении
+                                        <p>Оплата наличными при доставке заказа.</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-control custom-checkbox checkbox-checked-show-input w-100">
+                <input type="checkbox" class="custom-control-input" id="id_add_note">
+                <label class="custom-control-label" for="id_add_note">Добавить примечание к заказу</label>
+                <input type="text" class="form-control m-2" id="id_note" placeholder="Примечания к заказу, например, особые пожелания отделу доставки"/>
+            </div>
+                    <!--{form}-->
+            <p class="my-3 py-3 border border-secondary border-top-0 border-right-0 border-left-0">
+                Продолжая покупку, вы принимаете Правила и условия и Политика Конфиденциальности
+            </p>
+            <div class="d-flex w-100">
+                <div class="mr-auto">
+                    <a class="text-muted text-left py-3" href="{% url 'cart:details' %}">Вернуться в корзину</a>
+                </div>
+                <div class="ml-auto">
+                    <input type="submit" class="btn btn-danger py-2 px-sm-5 px-2 justify-content-end text-white" value="Оформление заказа"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col mt-sm-0 mt-5">
+        {% include 'cart/side_table.html' with shipping_form_lite="" show_list=True %}
+    </div>
+</div>
+{% endblock %}

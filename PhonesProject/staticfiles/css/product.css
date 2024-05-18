@@ -19,3 +19,17 @@
     }*/
     .product {max-width: 250px}
 }
+
+.round-span-number {
+    position: absolute;
+    left: -20px;
+    text-align: center;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid gray;
+    outline: 2px solid white;
+    background-color: white;
+    color: gray;
+    border-radius: 50%;
+}

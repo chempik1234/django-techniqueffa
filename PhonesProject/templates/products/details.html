@@ -34,15 +34,7 @@
     <div class="d-column mx-2">
         <h4 class="text-uppercase font-weight-light">{{product.title}}</h4>
         {% include 'products/price.html' with product=product %}
-        <form action="/cart-add/" class="w-md-75" method="post">
-            <div class="input-group">
-                <input type="hidden" name="product_id" id="id_product_id" value="{{product.pk}}">
-                <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="amount" id="id_amount" value="1">
-                <div class="input-group-append">
-                    <input type="submit" class="btn btn-bg-purple" value="В корзину">
-                </div>
-            </div>
-        </form>
+        {% include 'cart/add_form.html' with pk=product.pk %}
         <p class="py-5">Категория: {{product.category}}</p>
     </div>
 </div>

@@ -28,3 +28,8 @@
 .error-list li::marker {
     display: none;
 }
+
+.div-borders-horizontal>div {
+    padding: 20px;
+    border-right: 1px dashed lightgray;
+}

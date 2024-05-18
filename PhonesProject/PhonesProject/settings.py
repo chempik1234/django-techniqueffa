@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'authentication',
     'static_pages',
     'products',
+    'cart',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -68,6 +69,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'static_pages.context_processors.default_context',
+                'products.context_processors.default_context',
+                'cart.context_processors.default_context',
             ],
         },
     },
@@ -139,14 +143,14 @@ AUTH_USER_MODEL = 'authentication.User'
 
 # MY CUSTOM INFORMATION
 
-DEFAULT_CONTEXT = {"title": 'Technique',
-                   "title_header": "",
-                   'company_phone': '+7 967 459 43 58',
-                   'company_email': 'fahrazievdenis97@gmail.com',
-                   'company_address': "Республика Башкортостан",
-                   'form_needs_images': False,
-                   'categories': {},
-                   'bg_color': 'white'}
+# DEFAULT_CONTEXT = {"title": 'Technique',
+#                    "title_header": "",
+#                    'company_phone': '+7 967 459 43 58',
+#                    'company_email': 'fahrazievdenis97@gmail.com',
+#                    'company_address': "Республика Башкортостан",
+#                    'form_needs_images': False,
+#                    'categories': {},
+#                    'bg_color': 'white'}
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -154,3 +158,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = os.getenv("PhonesShopEmail")
 EMAIL_HOST_PASSWORD = os.getenv("PhonesShopEmailPassword")
 EMAIL_USE_TLS = True
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+CART_SESSION_ID = 'cart'

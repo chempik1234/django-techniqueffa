@@ -1,0 +1,38 @@
+.counter-div {
+    counter-reset: fieldsection;
+}
+.counter-div>div::before {
+    counter-increment: fieldsection;
+    content: counter(fieldsection) ".";
+    position: absolute;
+    font-size: 20px;
+    left: 0px;
+}
+.counter-div>div::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 30px;
+    width: 2px;
+    height: calc(100% - 30px);
+    background-color: silver;
+}
+.counter-div>div {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.radio-checked-show-p input[type="radio"]:checked ~ p {
+  display: block;
+}
+.radio-checked-show-p input[type="radio"]:not(:checked) ~ p {
+  display: none;
+}
+
+.checkbox-checked-show-input input[type="checkbox"]:checked ~ input {
+  display: block;
+}
+.checkbox-checked-show-input input[type="checkbox"]:not(:checked) ~ input {
+  display: none;
+}

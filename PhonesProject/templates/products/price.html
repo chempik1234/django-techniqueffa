@@ -5,5 +5,5 @@
     <p class="text-purple text-striked font-weight-bold">{{product.actual_price|floatformat:2}} ₽</p>
  </div>
 {% if product.actual_price != product.base_price %}
- <p class="my-2">Save: {{product.saving_money}}</p>
+ <p class="my-2">Save: {{product.save_money_percent}}</p>
 {% endif %}

@@ -1,0 +1,78 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/product.css' %}"/>
+{% if show_list %}
+<p>
+  <button class="text-muted border-0 bg-transparent" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Детали заказа
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  {% for item in cart %}
+    <div class="row">
+        <div class="col-3 d-flex">
+            {% if item.1.0.images.all.first %}
+            <img class="thumbnail" src="{{item.1.0.images.first.image.url}}">
+            {% endif %}
+            <div class="col p-relative">
+                <span class="round-span-number">{{item.1.1}}</span>
+            </div>
+        </div>
+        <div class="col-8">
+            <p class="font-weight-slim text-dark">{{item.1.0.title}}</p>
+            <div class="d-block">{% include 'products/price.html' with product=item.1.0 %}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+<table class="table mt-2">
+    <thead>
+        <tr>
+            <th></th>
+            <th class="text-right">Сумма</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Подытог</td>
+            <td class="text-right">{{cart.get_total_price}} ₽</td>
+        </tr>
+        <tr>
+            <td>
+                <p>Доставка по России</p>
+                <p>Адрес: <span id="addressSpan"</p>
+                <p class="text-muted">ненастоящая</p>
+            </td>
+            <td class="text-muted text-right">бесплатно</td>
+        </tr>
+        {% if address_form_lite != None and address_form_lite != "" %}
+        <tr>
+            <td colspan="2">
+                <div id="accordionAddress" role="tablist" class="w-100">
+                    <div class="card">
+                        <div class="card-header bg-light" role="tab" id="subaccordionAddress">
+                            <p class="mb-0">
+                                <a data-toggle="collapse" href="#collapseAddress" class="text-dark text-uppercase" aria-expanded="true"
+                                   aria-controls="collapseAddress">
+                                    Изменить адрес
+                                </a>
+                            </p>
+                        </div>
+                        <div id="collapseAddress" class="collapse p-3" role="tabpanel" aria-labelledby="subaccordionAddress">
+                            <!--<form action="{% url 'cart:order_form' %}">-->
+                            {{address_form_lite}}
+                                <script src="{% static 'js/address_form.js' %}"></script>
+                                <button id="addressFormButton" class="btn btn-bg-purple mt-1">Обновить</button>
+                            <!--</form>-->
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td><h4>Итог</h4></td>
+            <td class="text-right"><h4>{{cart.get_total_price}} ₽</h4></td>
+        </tr>
+    </tbody>
+</table>

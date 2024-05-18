@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+<p>Ваш заказ принят. Благодарим вас.</p>
+<div class="d-flex div-borders-horizontal">
+    <div>
+        <p>Номер заказа:</p>
+        <p class="font-weight-bold">{{order.id}}</p>
+    </div>
+    <div>
+        <p>Дата:</p>
+        <p class="font-weight-bold">{{order.date}}</p>
+    </div>
+    <div>
+        <p>Email:</p>
+        <p class="font-weight-bold">{{order.email}}</p>
+    </div>
+    <div>
+        <p>Итого:</p>
+        <p class="text-purple">{{order.get_total_price}} ₽</p>
+    </div>
+    <div>
+        <p>Способ оплаты:</p>
+        <p class="font-weight-bold">{{order.payment_type_str}}</p>
+    </div>
+</div>
+<h4 class="text-muted">Информация о заказе</h4>
+<div class="border rounded border-secondary py-4 px-3">
+    <div class="row mb-2">
+        <div class="col-8">
+            <p class="text-uppercase text-left">Товар</p>
+        </div>
+        <div class="col">
+            <p class="text-uppercase text-left">Итого</p>
+        </div>
+    </div>
+    {% for order_to_product in order.products.all %}
+    <div class="row border-left-0 border-right-0 border-top-0 pb-2">
+        <div class="col-8">
+            <p class="text-left">{{order_to_product.product.title}} x {{order_to_product.quantity}}</p>
+        </div>
+        <div class="col">
+            <p class="text-left text-purple">{{order_to_product.get_price}} ₽</p>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="row border-left-0 border-right-0 border-top-0 pb-2">
+        <div class="col-8">
+            <p class="text-left text-uppercase font-weight-bold">подытог:</p>
+        </div>
+        <div class="col">
+            <p class="text-left text-purple font-weight-bold">{{order.get_total_price}} ₽</p>
+        </div>
+    </div>
+    <div class="row border-left-0 border-right-0 border-top-0 pb-2">
+        <div class="col-8">
+            <p class="text-left text-uppercase font-weight-bold">способ оплаты:</p>
+        </div>
+        <div class="col">
+            <p class="text-left font-weight-bold">{{order.payment_type_str}}</p>
+        </div>
+    </div>
+    <div class="row border-left-0 border-right-0 border-top-0 pb-2">
+        <div class="col-8">
+            <p class="text-left text-uppercase font-weight-bold">итого:</p>
+        </div>
+        <div class="col">
+            <p class="text-left text-purple font-weight-bold">{{order.get_total_price}} ₽</p>
+        </div>
+    </div>
+</div>
+<div class="row my-3">
+    <div class="col">
+        <h5>Адрес доставки</h5>
+        <div class="border rounded border-secondary p-3">
+            {% for i in order.address_segments %}
+            {% if i %}
+            <p>{{i}}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col">
+        <h5>Платёжный адрес</h5>
+        <div class="border rounded border-secondary p-3">
+            {% for i in order.billing_segments %}
+            {% if i %}
+            <p>{{i}}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load multiply_filters %}
+{% block content %}
+<div class="row my-2 p-3">
+    <div class="col-8">
+        {% for item in cart %}
+        <div class="">
+            {% include 'products/product_bar.html' with product=item.1.0 %}
+            <div>
+                <p>Всего в корзине: <strong>{{item.1.1}} шт. ({{item.1.1|multiply:item.1.0.actual_price}}) ₽</strong></p>
+            </div>
+            <div class="d-inline-flex">
+                <div class="mr-2">
+            {% include 'cart/add_form.html' with pk=item.0 %}
+                </div>
+            {% include 'cart/delete_form.html' with pk=item.0 %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="col mt-sm-0 my-5">
+        <h4 class="">Всего: {{cart.get_total_price}} ₽</h4>
+        {% include 'cart/clear_form.html' %}
+        {% include 'cart/side_table.html' with address_form_lite=address_form_lite %}
+        <a class="btn btn-bg-purple mt-1" id="checkoutButton" href="{% url 'cart:order_form' %}">Заказать</a>
+    </div>
+</div>
+{% endblock %}

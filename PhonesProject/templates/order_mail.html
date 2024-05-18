@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Order received</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body style="margin: 0; padding: 0;">
+    <p>Ваш заказ принят. Благодарим вас. Письмо пришло сюда, так как при заказе была указана эта почта.</p>
+    <table style="margin-top: 30px;">
+    <tr>
+        <td>
+            <p>Номер заказа:</p>
+            <p style="font-weight: bold">{{order.id}}</p>
+        </td>
+        <td>
+            <p>Дата:</p>
+            <p style="font-weight: bold">{{order.date}}</p>
+        </td>
+        <td>
+            <p>Email:</p>
+            <p style="font-weight: bold">{{order.email}}</p>
+        </td>
+        <td>
+            <p>Итого:</p>
+            <p style="color: #D452F2">{{order.get_total_price}} ₽</p>
+        </td>
+        <td>
+            <p>Способ оплаты:</p>
+            <p style="font-weight: bold">{{order.payment_type_str}}</p>
+        </td>
+    </tr>
+    </table>
+    <h4 style="font-weight: bold; color: gray;">Информация о заказе</h4>
+    {% for order_to_product in order.products.all %}
+    <div style="padding: 20px; border-bottom: 1px solid lightgray; margin-bottom: 10px;">
+        <p>{{order_to_product.product.title}} x {{order_to_product.quantity}}</p>
+        <p style="color: #D452F2">{{order_to_product.get_price}} ₽</p>
+    </div>
+    {% endfor %}
+    <p style="font-weight: bold">ПОДЫТОГ: {{order.get_total_price}} ₽</p>
+    <p style="font-weight: bold">СПОСОБ ОПЛАТЫ: {{order.payment_type_str}}</p>
+    <p style="font-weight: bold">ИТОГО: {{order.get_total_price}} ₽</p>
+    <br>
+    <table style="margin-top: 30px;">
+        <thead>
+            <tr>
+                <th><h5>Адрес доставки</h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            {% for i in order.address_segments %}
+            {% if i %}
+                <td>
+                    <p>{{i}}</p>
+                </td>
+            {% endif %}
+            {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+    <table style="margin-top: 30px;">
+        <thead>
+            <tr>
+                <th><h5>Платёжный адрес</h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            {% for i in order.billing_segments %}
+            {% if i %}
+                <td>
+                    <p>{{i}}</p>
+                </td>
+            {% endif %}
+            {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

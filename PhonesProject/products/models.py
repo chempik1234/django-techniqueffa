@@ -32,6 +32,9 @@ class Product(models.Model):
     category = models.ForeignKey('Category', null=True, on_delete=models.SET_NULL, blank=True,
                                  verbose_name="Категория")
 
+    def save_money(self):
+        return self.base_price - self.actual_price
+
     def get_rate(self):
         average_rate = self.reviews.all().aggregate(avg_rate=Avg('rate'))['avg_rate']
         if average_rate is not None:
@@ -43,7 +46,7 @@ class Product(models.Model):
     def product_images(self):
         return ProductImageSerializer(self.images.all(), many=True).data
 
-    def saving_money(self):
+    def save_money_percent(self):
         return str(round((1 - self.actual_price / self.base_price) * 100, 1)) + " %"
 
     def __str__(self):
@@ -81,6 +84,12 @@ class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductImage
         fields = ['image']
+
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = ['id', 'title', 'actual_price', 'description', 'category']
 
 
 class Review(models.Model):

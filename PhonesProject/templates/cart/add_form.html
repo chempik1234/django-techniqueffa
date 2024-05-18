@@ -1,0 +1,10 @@
+<form action="{% url 'cart:add' %}" class="w-md-75" method="post">
+    {% csrf_token %}
+    <div class="input-group">
+        <input type="hidden" name="product_id" id="id_product_id" value="{{pk}}">
+        <input type="number" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" name="amount" id="id_amount" value="1" min="1">
+        <div class="input-group-append">
+            <input type="submit" class="btn btn-bg-purple" value="В корзину">
+        </div>
+    </div>
+</form>

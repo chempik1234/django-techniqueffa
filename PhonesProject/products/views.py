@@ -1,6 +1,4 @@
-from django.contrib.auth import login, logout
 from django.contrib import messages
-from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
@@ -11,19 +9,14 @@ from rest_framework.response import Response
 
 from .forms import PriceForm, ReviewForm
 from .models import Product, ProductImage, Category, Review
-from .product_list_selectors import get_random_products, get_rated_products, get_side_lists
 
 
 def main_page(request):
-    data = settings.DEFAULT_CONTEXT.copy()
-    data["title_header"] = None
-    data["side_lists"] = get_side_lists()
-    data['bg_color'] = 'light'
-    return render(request, "products/main_page.html", context=data)
+    return render(request, "products/main_page.html", context={'bg_color': 'light'})
 
 
 def product_page(request, product_id: int, form=None):
-    data = settings.DEFAULT_CONTEXT.copy()
+    data = {}
     product = get_object_or_404(Product, id=product_id)
     data["title_header"] = product.title
     data["product"] = product
@@ -31,7 +24,6 @@ def product_page(request, product_id: int, form=None):
         form = ReviewForm()
     data['review_form'] = form
     data['your_review'] = Review.objects.filter(author=request.user, product__id=product_id).first()
-    data["side_lists"] = get_side_lists()
     # data["product_images"] = ProductImageSerializer(product.images.all(), many=True).data
     return render(request, 'products/product.html', context=data)
 
@@ -70,11 +62,7 @@ def product_filter(request, q=None, order=None, price_min=None, price_max=None, 
     if price_max is None:
         price_max = try_get_int(query.get('price_max'))
 
-    data = settings.DEFAULT_CONTEXT.copy()
-    data["title_header"] = "Поиск"
-    data["q"] = q
-    data["category"] = category
-    data["side_lists"] = get_side_lists()
+    data = {"title_header": "Поиск", "q": q, "category": category}
 
     products = Product.objects.all()
     if category is not None:

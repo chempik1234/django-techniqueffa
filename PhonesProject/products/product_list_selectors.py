@@ -14,7 +14,7 @@ def get_random_products():
 
 
 SIDE_LISTS = {'Продукты': get_random_products,
-              'Продукты с лучшей оценкой:': get_rated_products}
+              'Продукты с лучшей оценкой': get_rated_products}
 
 
 def get_side_lists():

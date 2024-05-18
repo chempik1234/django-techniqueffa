@@ -1,6 +1,4 @@
 from django.contrib.auth import login, logout
-from django.contrib import messages
-from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -11,10 +9,9 @@ from .forms import SignInForm, SignUpForm
 from .models import User
 
 
-def main_page(request):
-    data = settings.DEFAULT_CONTEXT.copy()
-    data["title_header"] = "Главная"
-    return render(request, 'base.html', context=data)
+def profile_view(request):
+    data = {"title_header": "Профиль"}
+    return render(request, 'authentication/profile.html', context=data)
 
 
 class SignInView(APIView):
@@ -26,10 +23,7 @@ class SignInView(APIView):
             return HttpResponseRedirect('/')
         if form is None:
             form = SignInForm()
-        data_context = settings.DEFAULT_CONTEXT.copy()
-        data_context["title_header"] = "Вход"
-        data_context["form"] = form
-        data_context['method'] = 'post'
+        data_context = {"title_header": "Вход", "form": form, 'method': 'post'}
         return Response(data_context)
 
     def post(self, request):
@@ -42,12 +36,7 @@ class SignInView(APIView):
             if user and user.check_password(password):
                 login(request, user)
                 return HttpResponseRedirect("/")
-        # else:
-        #     messages.error(request, post.errors)
         form = post
-        # data_context = settings.DEFAULT_CONTEXT.copy()
-        # data_context["title_header"] = "Вход"
-        # data_context["form"] = form
 
         return self.get(request, form)
 
@@ -61,10 +50,7 @@ class SignUpView(APIView):
             return HttpResponseRedirect('/')
         if form is None:
             form = SignUpForm()
-        data_context = settings.DEFAULT_CONTEXT.copy()
-        data_context["title_header"] = "Регистрация"
-        data_context["form"] = form
-        data_context['method'] = 'post'
+        data_context = {"title_header": "Регистрация", "form": form, 'method': 'post'}
         return Response(data_context)
 
     def post(self, request):

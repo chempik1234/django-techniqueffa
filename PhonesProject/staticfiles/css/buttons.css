@@ -22,7 +22,7 @@
     color: white;
 }
 .btn-bg-purple {
-    color: white;
+    color: white!important;
     background-color: #D452F2;
     transition: background-color .2s;
 }
@@ -32,13 +32,13 @@
     transition: all .2s;
 }
 .btn-outline-purple {
-    color: #D452F2;
+    color: #D452F2!important;
     background-color: white;
     border: 1px solid #D452F2;
     transition: all .2s;
 }
 .btn-outline-purple:hover {
-    color: white;
+    color: white!important;
     background-color: #D452F2;
     border: none;
     transition: all .2s;
