@@ -1,24 +1,5 @@
-#!/bin/bash
-# Install pip first
-# echo "Installing pip..."
-# sudo apt install python3-pip
-python3 --version
-# Update pip
-echo "Updating pip..."
-python3.12 pip install -U pip
+pip install -r requirements.txt
 
-# Install dependencies
-
-echo "Installing project dependencies..."
-python3.12 -m pip install -r requirements.txt
-
-# Make migrations
-echo "Making migrations..."
-python3.12 manage.py makemigrations --noinput
-python3.12 manage.py migrate --noinput
-
-# Collect staticfiles
-echo "Collect static..."
-python3.12 manage.py collectstatic --noinput --clear
-
-echo "Build process completed!"
+# make migrations
+python3.9 manage.py migrate 
+python3.9 manage.py collectstatic
