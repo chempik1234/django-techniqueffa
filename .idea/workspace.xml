@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="cloudinary!">
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="no static in vercel.json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/vercel.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,14 +96,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715269531808</updated>
-    </task>
-    <task id="LOCAL-00001" summary="static pages added">
-      <option name="closed" value="true" />
-      <created>1715671684192</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1715671684192</updated>
     </task>
     <task id="LOCAL-00002" summary="just better">
       <option name="closed" value="true" />
@@ -472,7 +465,31 @@
       <option name="project" value="LOCAL" />
       <updated>1716109536619</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="cloudinary! 2">
+      <option name="closed" value="true" />
+      <created>1716110407537</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1716110407537</updated>
+    </task>
+    <task id="LOCAL-00049" summary="cloudinary! 2">
+      <option name="closed" value="true" />
+      <created>1716110450169</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1716110450169</updated>
+    </task>
+    <task id="LOCAL-00050" summary="no static in vercel.json">
+      <option name="closed" value="true" />
+      <created>1716110575024</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1716110575024</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -487,8 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[psycopg2-binary==2.9.9]" />
-    <MESSAGE value="come on" />
     <MESSAGE value="youtube tutorial" />
     <MESSAGE value="more changes!" />
     <MESSAGE value="oof" />
@@ -512,6 +527,8 @@
     <MESSAGE value="sussy blob" />
     <MESSAGE value="facepalm" />
     <MESSAGE value="cloudinary!" />
-    <option name="LAST_COMMIT_MESSAGE" value="cloudinary!" />
+    <MESSAGE value="cloudinary! 2" />
+    <MESSAGE value="no static in vercel.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="no static in vercel.json" />
   </component>
 </project>
