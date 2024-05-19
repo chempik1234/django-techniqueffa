@@ -64,7 +64,9 @@
         </div>
     </div>
     <div class="d-none d-md-block flex-shrink-1 px-3 my-2 mr-0">
+        {% if user.is_authenticated %}
         {% include 'cart/minimized.html' %}
+        {% endif %}
         {% include 'products/side_lists.html' with side_lists=side_lists %}
         <!--<form action="/search">
             <div class="input-group">

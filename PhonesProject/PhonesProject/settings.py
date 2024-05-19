@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'static_pages',
     'products',
     'cart',
+    'storages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+DEFAULT_FILE_STORAGE = 'storages.backends.vercel.VercelBlobStorage'
+VERCEL_BLOB_STORAGE = {
+    # 'bucket_name': 'your-bucket-name',
+    # 'project_id': 'your-project-id',
+    'token': os.getenv("BLOB_READ_WRITE_TOKEN"),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
