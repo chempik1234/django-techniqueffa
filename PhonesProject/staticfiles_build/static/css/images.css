@@ -1,0 +1,33 @@
+.thumbnail {
+  max-height: 100px;
+  width: auto;
+}
+.h-50px {
+    max-height: 50px;
+    width: auto;
+}
+.main-image {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    transition: transform 0.1s ease;
+}
+
+.main-image:hover {
+  transform: scale(1.1);
+  cursor: zoom-in;
+}
+.image-zoom-container {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+}
+@media screen and (min-width: 576px) {
+    .image-zoom-container {
+      width: 400px;
+      height: 600px;
+    }
+}

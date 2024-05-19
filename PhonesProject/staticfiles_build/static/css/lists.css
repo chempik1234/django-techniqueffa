@@ -1,0 +1,35 @@
+.pictures-list {
+    vertical-align: middle;
+    height: 50px;
+}
+.pic>p{
+    font-size: 22px;
+}
+.pic p{
+    margin-bottom: 0;
+}
+.pic {
+    display: inline-flex;
+    text-decoration: none;
+}
+.pic::before {
+    display: inline-block;
+    width: 30px;
+    margin: auto 1px auto 0px;
+    vertical-align: middle;
+}
+/* */
+.error-list li {
+    background-color: #e121c2;
+    border: 1px solid purple;
+    border-radius: 10px;
+    padding: 10px;
+}
+.error-list li::marker {
+    display: none;
+}
+
+.div-borders-horizontal>div {
+    padding: 20px;
+    border-right: 1px dashed lightgray;
+}

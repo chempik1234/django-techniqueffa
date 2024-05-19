@@ -1,0 +1,31 @@
+.pic-user::before {
+    content: url('/static/img/user.png');
+}
+.pic-bucket::before {
+    content: url('/static/img/bucket.png');
+}
+.pic-mail::before {
+    content: url('/static/img/mail.png');
+}
+.pic-phone::before {
+    content: url('/static/img/phone.png');
+}
+.pic-address::before {
+    content: url('/static/img/address.png');
+}
+.pic-truck::after {
+    content: url('/static/img/truck.png');
+    margin-left: 7px;
+}
+.pic-headphones::after {
+    content: url('/static/img/headphones.png');
+    margin-left: 7px;
+}
+.pic-refund::after {
+    content: url('/static/img/refund.png');
+    margin-left: 7px;
+}
+.pic-payment::after {
+    content: url('/static/img/payment.png');
+    margin-left: 7px;
+}

@@ -1,0 +1,64 @@
+.rating-bar {
+	overflow: hidden;
+	margin: 0 auto;
+}
+.rating-bar:not(:checked) > label:before {
+	content: '★';
+}
+.rating-bar > label {
+	/* float: right; */
+	padding: 0;
+	cursor: pointer;
+	width: 30px;
+	font-size: 30px;
+	line-height: 1;
+	color: gold;
+}
+.rating-bar:not(:checked) > input {
+	display: none;
+}
+.rating-bar > input:checked ~ label {
+	color: lightgray;
+}
+.rating-bar:not(:checked) > label:hover,
+.rating-bar > input:checked + label,
+.rating-bar:hover > label {
+    color: gold;
+}
+.rating-bar:not(:checked) > label:hover ~ label {
+	color: lightgray;
+}
+.rate-bar > label:active {
+	position: relative;
+}
+/* RATING RESULT */
+.rating-result {
+    display: flex;
+	margin: 0 auto;
+	padding: 4px 0px;
+}
+.rating-result span {
+	font-size: 30px;
+	line-height: 1;
+	color: lightgrey;
+}
+.rating-result > span:before {
+	content: '★';
+}
+.rating-result > span.active {
+	color: gold;
+}
+
+
+.rating-result > span.semi-active {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+}
+
+.rating-result > span.semi-active:before {
+  left: 0;
+  background: linear-gradient(to right, gold 50%, lightgray 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
