@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="static WOW 2" />
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="cloudinary!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,12 +37,13 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danis/PycharmProjects/PhonesShop/PhonesProject/staticfiles/js&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danis/PycharmProjects/PhonesShop/PhonesProject/staticfiles_build&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Danis\PycharmProjects\PhonesShop\PhonesProject\staticfiles_build" />
       <recent name="C:\Users\Danis\PycharmProjects\PhonesShop\PhonesProject\staticfiles\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -309,7 +312,167 @@
       <option name="project" value="LOCAL" />
       <updated>1716063818138</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="test">
+      <option name="closed" value="true" />
+      <created>1716064096867</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1716064096867</updated>
+    </task>
+    <task id="LOCAL-00029" summary="test">
+      <option name="closed" value="true" />
+      <created>1716064483911</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1716064483911</updated>
+    </task>
+    <task id="LOCAL-00030" summary="test">
+      <option name="closed" value="true" />
+      <created>1716064690312</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1716064690312</updated>
+    </task>
+    <task id="LOCAL-00031" summary="????">
+      <option name="closed" value="true" />
+      <created>1716064934415</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1716064934415</updated>
+    </task>
+    <task id="LOCAL-00032" summary="????">
+      <option name="closed" value="true" />
+      <created>1716065083076</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1716065083076</updated>
+    </task>
+    <task id="LOCAL-00033" summary="susick">
+      <option name="closed" value="true" />
+      <created>1716065524765</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1716065524765</updated>
+    </task>
+    <task id="LOCAL-00034" summary="heavy artillery">
+      <option name="closed" value="true" />
+      <created>1716066050015</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1716066050015</updated>
+    </task>
+    <task id="LOCAL-00035" summary="heavy artillery">
+      <option name="closed" value="true" />
+      <created>1716066672239</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1716066672239</updated>
+    </task>
+    <task id="LOCAL-00036" summary="heavy artillery">
+      <option name="closed" value="true" />
+      <created>1716066846987</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1716066846987</updated>
+    </task>
+    <task id="LOCAL-00037" summary="heavy artillery">
+      <option name="closed" value="true" />
+      <created>1716067564857</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1716067564857</updated>
+    </task>
+    <task id="LOCAL-00038" summary="heavy artillery x2">
+      <option name="closed" value="true" />
+      <created>1716067874814</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1716067874814</updated>
+    </task>
+    <task id="LOCAL-00039" summary="static pages no default context">
+      <option name="closed" value="true" />
+      <created>1716100573431</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1716100573431</updated>
+    </task>
+    <task id="LOCAL-00040" summary="email reset function">
+      <option name="closed" value="true" />
+      <created>1716101568811</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1716101568811</updated>
+    </task>
+    <task id="LOCAL-00041" summary="media /tmp">
+      <option name="closed" value="true" />
+      <created>1716103101320</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1716103101320</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fix price.html">
+      <option name="closed" value="true" />
+      <created>1716103343583</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1716103343583</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix media.. ?">
+      <option name="closed" value="true" />
+      <created>1716105606620</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1716105606620</updated>
+    </task>
+    <task id="LOCAL-00044" summary="sussy blob">
+      <option name="closed" value="true" />
+      <created>1716107488647</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1716107488647</updated>
+    </task>
+    <task id="LOCAL-00045" summary="facepalm">
+      <option name="closed" value="true" />
+      <created>1716108039894</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1716108039894</updated>
+    </task>
+    <task id="LOCAL-00046" summary="facepalm">
+      <option name="closed" value="true" />
+      <created>1716108115059</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1716108115059</updated>
+    </task>
+    <task id="LOCAL-00047" summary="cloudinary!">
+      <option name="closed" value="true" />
+      <created>1716109536619</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1716109536619</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,14 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="static pages added" />
-    <MESSAGE value="just better" />
-    <MESSAGE value="sus" />
-    <MESSAGE value="almost ready (remains: cart-orders + postgres + undebug)" />
-    <MESSAGE value="ready" />
-    <MESSAGE value="ready for vercel?" />
-    <MESSAGE value="debug = false" />
-    <MESSAGE value="vercel config" />
     <MESSAGE value="[psycopg2-binary==2.9.9]" />
     <MESSAGE value="come on" />
     <MESSAGE value="youtube tutorial" />
@@ -344,6 +499,19 @@
     <MESSAGE value="static" />
     <MESSAGE value="static WOW" />
     <MESSAGE value="static WOW 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="static WOW 2" />
+    <MESSAGE value="test" />
+    <MESSAGE value="????" />
+    <MESSAGE value="susick" />
+    <MESSAGE value="heavy artillery" />
+    <MESSAGE value="heavy artillery x2" />
+    <MESSAGE value="static pages no default context" />
+    <MESSAGE value="email reset function" />
+    <MESSAGE value="media /tmp" />
+    <MESSAGE value="fix price.html" />
+    <MESSAGE value="fix media.. ?" />
+    <MESSAGE value="sussy blob" />
+    <MESSAGE value="facepalm" />
+    <MESSAGE value="cloudinary!" />
+    <option name="LAST_COMMIT_MESSAGE" value="cloudinary!" />
   </component>
 </project>
