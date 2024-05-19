@@ -45,12 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-DEFAULT_FILE_STORAGE = 'storages.backends.vercel.VercelBlobStorage'
-VERCEL_BLOB_STORAGE = {
-    # 'bucket_name': 'your-bucket-name',
-    # 'project_id': 'your-project-id',
-    'token': os.getenv("BLOB_READ_WRITE_TOKEN"),
-}
+# DEFAULT_FILE_STORAGE = 'storages.backends.vercel.VercelBlobStorage'
+# VERCEL_BLOB_STORAGE = {
+#     # 'bucket_name': 'your-bucket-name',
+#     # 'project_id': 'your-project-id',
+#     'token': os.getenv("BLOB_READ_WRITE_TOKEN"),
+# }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -160,7 +160,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = "/tmp/media/"  # os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = "/src/media/"  # os.path.join(BASE_DIR, 'media')
 
 print('Settings.py MEDIA_ROOT: %s' % MEDIA_ROOT)
 
