@@ -54,8 +54,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'PhonesProject.urls'
-
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
 TEMPLATES = [
@@ -154,7 +152,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = "/tmp/media"  # os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = "/tmp/media/"  # os.path.join(BASE_DIR, 'media')
+
+print('Settings.py MEDIA_ROOT: %s' % MEDIA_ROOT)
+
+ROOT_URLCONF = 'PhonesProject.urls'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
