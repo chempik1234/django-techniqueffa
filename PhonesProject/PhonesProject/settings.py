@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 from os import getenv
+import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -36,6 +37,7 @@ INSTALLED_APPS = [
     'static_pages',
     'products',
     'cart',
+    'cloudinary_storage',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,7 +46,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-# DEFAULT_FILE_STORAGE = 'storages.backends.vercel.VercelBlobStorage'
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": os.getenv("CLOUD_NAME"),
+    "API_KEY": os.getenv("CLOUD_API_KEY"),
+    "API_SECRET": os.getenv("CLOUD_API_SECRET"),
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # VERCEL_BLOB_STORAGE = {
 #     # 'bucket_name': 'your-bucket-name',
 #     # 'project_id': 'your-project-id',

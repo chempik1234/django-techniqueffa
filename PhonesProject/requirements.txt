@@ -6,3 +6,4 @@ pillow
 psycopg2-binary
 sqlparse
 tzdata
+django_cloudinary_storage
