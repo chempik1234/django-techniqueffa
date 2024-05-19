@@ -65,3 +65,7 @@ class PasswordResetForm(forms.Form):
             raise forms.ValidationError("Пользователя с такой почтой нет!")
         return email
 
+
+class EmailForm(forms.Form):
+    email = forms.EmailField(label='Почта', required=True,
+                             max_length=100, widget=forms.EmailInput(attrs={'class': 'form-control'}))

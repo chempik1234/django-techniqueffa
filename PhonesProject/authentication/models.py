@@ -26,7 +26,7 @@ class UserManager(BaseUserManager):
 
         return user
 
-    def create_superuser(self, email: str, password: str):
+    def create_superuser(self, email: str, password: str, is_staff=True, is_superuser=True):
         """ Creates an admin, is_staff is True """
         user = self.create_user(email, password, True, True)
 

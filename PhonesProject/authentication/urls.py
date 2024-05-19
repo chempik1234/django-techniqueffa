@@ -1,11 +1,12 @@
 from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, \
     PasswordResetCompleteView
 from django.urls import path, re_path, reverse_lazy
-from .views import SignInView, SignUpView, logout_view, profile_view
+from .views import SignInView, SignUpView, logout_view, profile_view, email_reset_view
 
 app_name = 'authentication'
 
 urlpatterns = [
+    path('email-reset', email_reset_view, name='email_reset'),
     path('profile', profile_view, name='profile'),
     re_path(r'^sign-in', SignInView.as_view(), name="sign_in"),
     re_path(r'^sign-up', SignUpView.as_view(), name="sign_up"),

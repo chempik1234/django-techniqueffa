@@ -1,11 +1,13 @@
+from django.contrib import messages
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views.decorators.http import require_POST
 from rest_framework.views import APIView
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
-from .forms import SignInForm, SignUpForm
+from .forms import SignInForm, SignUpForm, EmailForm
 from .models import User
 
 
@@ -68,3 +70,17 @@ class SignUpView(APIView):
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect('/')
+
+
+@login_required
+@require_POST
+def email_reset_view(request):
+    form = EmailForm(request.POST)
+    if form.is_valid():
+        new_email = form.cleaned_data['email']
+        request.user.email = new_email
+        request.user.save()
+        messages.success(request, "Успешно сброшена почта!")
+    else:
+        messages.error(request, "В почте ошибка, не сброшено!")
+    return redirect('authentication:profile')
