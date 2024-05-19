@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="no static in vercel.json">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/vercel.json" afterDir="false" />
-    </list>
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="too sus" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,22 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715269531808</updated>
-    </task>
-    <task id="LOCAL-00002" summary="just better">
-      <option name="closed" value="true" />
-      <created>1715673728837</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1715673728837</updated>
-    </task>
-    <task id="LOCAL-00003" summary="sus">
-      <option name="closed" value="true" />
-      <created>1715778648636</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1715778648636</updated>
     </task>
     <task id="LOCAL-00004" summary="sus">
       <option name="closed" value="true" />
@@ -489,7 +470,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716110575024</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="static in vercel.json">
+      <option name="closed" value="true" />
+      <created>1716111477795</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1716111477795</updated>
+    </task>
+    <task id="LOCAL-00052" summary="too sus">
+      <option name="closed" value="true" />
+      <created>1716111603462</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1716111603462</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -504,8 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="youtube tutorial" />
-    <MESSAGE value="more changes!" />
     <MESSAGE value="oof" />
     <MESSAGE value="more changess!" />
     <MESSAGE value="dsakjdhsahdasj!!!!!" />
@@ -529,6 +524,8 @@
     <MESSAGE value="cloudinary!" />
     <MESSAGE value="cloudinary! 2" />
     <MESSAGE value="no static in vercel.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="no static in vercel.json" />
+    <MESSAGE value="static in vercel.json" />
+    <MESSAGE value="too sus" />
+    <option name="LAST_COMMIT_MESSAGE" value="too sus" />
   </component>
 </project>
