@@ -1,10 +1,12 @@
-{% for list_name, list in side_lists.items %}
+{% for list_name, list_d_side_d_main in side_lists.items %}
+{% if list_d_side_d_main.1 %}
 <div class="bg-white p-3">
     <h4 class="font-weight-normal">{{list_name}}</h4>
     <div class="d-column">
-        {% for product_listed in list %}
+        {% for product_listed in list_d_side_d_main.0 %}
             {% include 'products/product_bar.html' with product=product_listed %}
         {% endfor %}
     </div>
 </div>
+{% endif %}
 {% endfor %}

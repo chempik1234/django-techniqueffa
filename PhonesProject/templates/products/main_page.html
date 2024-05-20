@@ -23,15 +23,17 @@
                 </div>
             </div>
         </div>
-        {% for list_name, list in side_lists.items %}
+        {% for list_name, list_d_side_d_main in side_lists.items %}
+        {% if list_d_side_d_main.2 %}
         <div class="p-2 bg-white mt-3">
             <h4 class="font-weight-bold">{{list_name}}</h4>
             <div class="cards-container">
-            {% for product in list %}
+            {% for product in list_d_side_d_main.0 %}
                 {% include 'products/product_card.html' with product=product %}
             {% endfor %}
             </div>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 </div>

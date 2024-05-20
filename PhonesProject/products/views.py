@@ -23,7 +23,8 @@ def product_page(request, product_id: int, form=None):
     if form is None:
         form = ReviewForm()
     data['review_form'] = form
-    data['your_review'] = Review.objects.filter(author=request.user, product__id=product_id).first()
+    if request.user.is_authenticated:
+        data['your_review'] = Review.objects.filter(author=request.user, product__id=product_id).first()
     # data["product_images"] = ProductImageSerializer(product.images.all(), many=True).data
     return render(request, 'products/product.html', context=data)
 

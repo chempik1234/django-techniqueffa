@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="html fix?">
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="hot fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/products/product_list_selectors.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/product_list_selectors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/main_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/main_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/product_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product_bar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/side_lists.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/side_lists.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +41,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Danis/PycharmProjects/PhonesShop/PhonesProject/staticfiles_build/static/img&quot;,
@@ -100,14 +104,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715269531808</updated>
-    </task>
-    <task id="LOCAL-00005" summary="almost ready (remains: cart-orders + postgres + undebug)">
-      <option name="closed" value="true" />
-      <created>1715881396538</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1715881396538</updated>
     </task>
     <task id="LOCAL-00006" summary="ready">
       <option name="closed" value="true" />
@@ -493,7 +489,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716112229499</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="hot fix">
+      <option name="closed" value="true" />
+      <created>1716192558509</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1716192558510</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -508,7 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="more changess!" />
     <MESSAGE value="dsakjdhsahdasj!!!!!" />
     <MESSAGE value="..?" />
     <MESSAGE value="findstatic" />
@@ -533,6 +536,7 @@
     <MESSAGE value="static in vercel.json" />
     <MESSAGE value="too sus" />
     <MESSAGE value="html fix?" />
-    <option name="LAST_COMMIT_MESSAGE" value="html fix?" />
+    <MESSAGE value="hot fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="hot fix" />
   </component>
 </project>
