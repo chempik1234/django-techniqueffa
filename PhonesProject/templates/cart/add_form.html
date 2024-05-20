@@ -1,4 +1,4 @@
-<form action="{% url 'cart:add' %}" class="w-md-75" method="post">
+<form action="{% url 'cart:add' %}" class="" method="post"> <!--"w-md-75-->
     {% csrf_token %}
     <div class="input-group">
         <input type="hidden" name="product_id" id="id_product_id" value="{{pk}}">
