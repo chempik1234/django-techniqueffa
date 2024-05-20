@@ -31,6 +31,9 @@
     <div class="d-flex flex-column ml-auto mr-0 justify-content-end">
       {% include 'products/price.html' with product=product %}
     </div>
+    <div class="mt-1">
+      {% include 'cart/add_form.html' with pk=product.pk %}
+    </div>
   </div>
 
 </div>

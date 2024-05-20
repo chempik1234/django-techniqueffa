@@ -30,7 +30,7 @@ def total_quantity(request):
     return cart.__len__()
 
 
-@login_required
+@login_required(login_url='authentication:sign_in')
 @require_POST
 def cart_add(request):
     form = AddForm(request.POST)

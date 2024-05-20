@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="too sus" />
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="html fix?">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,12 +40,14 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danis/PycharmProjects/PhonesShop/PhonesProject/staticfiles_build&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danis/PycharmProjects/PhonesShop/PhonesProject/staticfiles_build/static/img&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Danis\PycharmProjects\PhonesShop\PhonesProject\staticfiles_build\static\img" />
+      <recent name="C:\Users\Danis\PycharmProjects\PhonesShop\PhonesProject\static\img" />
       <recent name="C:\Users\Danis\PycharmProjects\PhonesShop\PhonesProject\staticfiles_build" />
       <recent name="C:\Users\Danis\PycharmProjects\PhonesShop\PhonesProject\staticfiles\js" />
     </key>
@@ -93,14 +100,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715269531808</updated>
-    </task>
-    <task id="LOCAL-00004" summary="sus">
-      <option name="closed" value="true" />
-      <created>1715788860682</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1715788860682</updated>
     </task>
     <task id="LOCAL-00005" summary="almost ready (remains: cart-orders + postgres + undebug)">
       <option name="closed" value="true" />
@@ -486,7 +485,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716111603462</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="html fix?">
+      <option name="closed" value="true" />
+      <created>1716112229499</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1716112229499</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -501,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="oof" />
     <MESSAGE value="more changess!" />
     <MESSAGE value="dsakjdhsahdasj!!!!!" />
     <MESSAGE value="..?" />
@@ -526,6 +532,7 @@
     <MESSAGE value="no static in vercel.json" />
     <MESSAGE value="static in vercel.json" />
     <MESSAGE value="too sus" />
-    <option name="LAST_COMMIT_MESSAGE" value="too sus" />
+    <MESSAGE value="html fix?" />
+    <option name="LAST_COMMIT_MESSAGE" value="html fix?" />
   </component>
 </project>
