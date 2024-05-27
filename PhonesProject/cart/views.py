@@ -61,7 +61,7 @@ def cart_remove(request, product_id):
     return redirect('cart:details')
 
 
-@login_required
+@login_required(login_url="authentication:sign_in")
 def cart_details(request):
     data = {"address_form_lite": AddressFormLite(),
             'title_header': 'Корзина'}
