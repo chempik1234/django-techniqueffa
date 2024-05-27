@@ -56,13 +56,13 @@
       <div class="bg-light d-none d-md-block">
         <div class="row d-sm-flex w-40 mx-auto py-2">
             <div class="col">
-                <a href="/support" class="text-secondary font-weight-light">Поддержка и помощь</a>
+                <a href="{% url 'static_pages:support' %}" class="text-secondary font-weight-light">Поддержка и помощь</a>
             </div>
             <div class="col">
-                <a href="/contacts" class="text-secondary font-weight-light">{{company_phone}}</a>
+                <a href="{% url 'static_pages:contacts' %}" class="text-secondary font-weight-light">{{company_phone}}</a>
             </div>
             <div class="col">
-                <a href="/about" class="text-secondary font-weight-light">О магазине</a>
+                <a href="{% url 'static_pages:about' %}" class="text-secondary font-weight-light">О магазине</a>
             </div>
         </div>
       </div>
@@ -82,8 +82,8 @@
                     <a class="dropdown-item btn-bg-to-purple" href="{% url 'authentication:profile' %}">Мой аккаунт</a>
                 </div>
             </div>
-            <a class="nav-item nav-btn nav-link active btn-purple" href="/cart">Корзина</a>
-            <a class="nav-item nav-btn nav-link active btn-purple" href="/contacts">Контакты</a>
+            <a class="nav-item nav-btn nav-link active btn-purple" href="{% url 'cart:details' %}">Корзина</a>
+            <a class="nav-item nav-btn nav-link active btn-purple" href="{% url 'static_pages:contacts' %}">Контакты</a>
             {% if user.is_authenticated %}
             <form action="{% url 'authentication:sign_out' %}" method="post" class="mr-auto my-auto">
               {% csrf_token %}
