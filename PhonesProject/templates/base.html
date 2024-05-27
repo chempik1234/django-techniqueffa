@@ -78,8 +78,8 @@
                 <a class="nav-link nav-btn dropdown-toggle active btn-purple" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Магазин</a> <!--my-dropdown-btn -->
                 <div class="dropdown-menu my-dropdown">
                     <a class="dropdown-item btn-bg-to-purple" href="{% url 'products:filter' %}">Каталог товаров</a>
-                    <a class="dropdown-item btn-bg-to-purple" href="/my-orders">Мои заказы</a>
-                    <a class="dropdown-item btn-bg-to-purple" href="/my-account">Мой аккаунт</a>
+                    <!--<a class="dropdown-item btn-bg-to-purple" href="/my-orders">Мои заказы</a>-->
+                    <a class="dropdown-item btn-bg-to-purple" href="{% url 'authentication:profile' %}">Мой аккаунт</a>
                 </div>
             </div>
             <a class="nav-item nav-btn nav-link active btn-purple" href="/cart">Корзина</a>
