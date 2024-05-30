@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = getenv("PHONES_PROJECT_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [".vercel.app", '.now.sh', '127.0.0.1', 'localhost']
 
@@ -103,10 +103,6 @@ WSGI_APPLICATION = 'PhonesProject.wsgi.app'
 #     }
 # }
 DATABASES = {
-   # 'default': {
-   #     'ENGINE': 'django.db.backends.sqlite3',
-   #     'NAME': BASE_DIR / 'db.sqlite3',
-   # }
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
        'NAME': os.getenv("POSTGRES_DATABASE"),
@@ -154,7 +150,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = '/staticfiles_build/static'  # os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # if not DEBUG:
 #     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
