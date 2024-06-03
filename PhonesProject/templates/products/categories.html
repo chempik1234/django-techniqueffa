@@ -4,7 +4,7 @@
   <button type="button" id="category-{{category.pk}}" class="dropdown-toggle border-0 btn-bg-to-purple w-100 hover-click-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {{category.title}}
   </button>
-  <div class="dropdown-menu" aria-labelledby="category-{{category.pk}}" x-placement="right-start" style="position: absolute; transform: translate3d(111px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+  <div class="dropdown-menu" aria-labelledby="category-{{category.pk}}" x-placement="right-start" style="position: absolute; transform: translate3d(168px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
     {% include 'products/categories.html' with categories=category.children.all %}
   </div>
 </div>

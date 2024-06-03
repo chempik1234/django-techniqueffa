@@ -1,9 +1,11 @@
-<div class="d-flex">
+<div class="d-flex flex-wrap mr-2">
 {% if product.actual_price != product.base_price %}
-    <p class="text-purple text-striked mr-2">{{product.base_price|floatformat:2}} ₽</p>
+    <h6 class="font-weight-normal text-purple text-striked mr-2">{{product.base_price|floatformat:2}} ₽</h6>
 {% endif %}
-    <p class="text-purple font-weight-bold">{{product.actual_price|floatformat:2}} ₽</p>
+    <h5 class="text-purple font-weight-bold">{{product.actual_price|floatformat:2}} ₽</h5>
  </div>
-{% if product.actual_price != product.base_price %}
- <p class="my-2">Save: {{product.save_money_percent}}</p>
+{% if product.actual_price < product.base_price %}
+ <h5 class="text-muted">-{{product.save_money_percent}}</h5>
+{% elif product.actual_price > product.base_price %}
+ <h5 class="text-danger">дороже {{product.save_money_percent}}</h5>
 {% endif %}

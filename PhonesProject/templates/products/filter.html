@@ -3,10 +3,8 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{%static 'css/product.css'%}"/>
 <div class="row d-flex my-3">
-    <div class="col">
-        <p>{% if amount > 0 %}Найдено {{amount}} шт.{% else %}Ничего не найдено{% endif %}</p>
-    </div>
-    <div class="col-md">
+    <div class="col d-flex">
+        <p class="mr-3">{% if amount > 0 %}Найдено {{amount}} шт.{% else %}Ничего не найдено{% endif %}</p>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle"
                   type="button" id="dropdownMenu1" data-toggle="dropdown"
@@ -19,7 +17,7 @@
           </div>
         </div>
     </div>
-    <div class="col">
+    <div class="col-md d-flex">
         <form action="{% url 'products:filter' %}?{% if q != None %}q={{ q }}&{% endif %}category={{ category }}" class="d-flex justify-content-center input-group">
             {% if category != None %}<input type="hidden" name="category" value="{{category}}"/>{% endif %}
             {% if order_num != None %}<input type="hidden" name="order" value="{{order_num}}"/>{% endif %}

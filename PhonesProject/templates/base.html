@@ -74,6 +74,7 @@
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
           <div class="navbar-nav mr-auto mr-sm-0">
             <a class="nav-item nav-btn nav-link active btn-purple" href="{% url 'products:main_page' %}">Главная</a>
+            <a class="nav-item nav-btn nav-link active btn-purple" href="{% url 'static_pages:about' %}">О нас</a>
             <div class="nav-item dropdown">
                 <a class="nav-link nav-btn dropdown-toggle active btn-purple" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Магазин</a> <!--my-dropdown-btn -->
                 <div class="dropdown-menu my-dropdown">
@@ -99,19 +100,19 @@
       <div class="justify-content-end flex-wrap d-flex container">
           <div class="pictures-list">
               {% if user.is_authenticated %}
-              <a href="{% url 'authentication:profile' %}" class="text-secondary pic pic-user">
+              <a href="{% url 'authentication:profile' %}" class="text-secondary pic pic-user mr-3" style="font-size:22px">
                   <p>{{user.get_short_name}}</p>
               </a>
               {% else %}
-              <a href="{% url 'authentication:sign_in' %}" class="text-secondary pic pic-user">
+              <a href="{% url 'authentication:sign_in' %}" class="text-secondary pic pic-user mr-3" style="font-size:22px">
                   <p>Войти</p>
               </a>
               {% endif %}
-              <a href="{% url 'cart:details' %}" class="text-secondary pic pic-bucket">
+              <a href="{% url 'cart:details' %}" class="text-secondary pic pic-bucket" style="font-size:22px">
                   {% with total_items=cart.total_unique total_price=cart.get_total_price %}
                   <div class="d-column">
-                      <p>Корзина <span class="badge badge-pill badge-primary">{{total_items}}</span></p>
-                      <p class="text-success font-weight-bold">{{total_price}} ₽</p>
+                      <p style="font-size:22px">Корзина <span class="text-success font-weight-bold">{{total_price}} ₽</span></p>
+                      <!-- <span class="badge badge-pill badge-primary">{{total_items}}</span>-->
                   </div>
                   {% endwith %}
               </a>
@@ -124,7 +125,7 @@
       </div>
     </header>
     <div class="bg-{% if bg_color %}{{bg_color}}{% else %}white{% endif %} py-3">
-    <div class="container">
+    <div class="container" id="main-container">
         <div class="row">
             <div class="col mr-sm-5 dropdown">
               <button class="btn btn-dark rounded-top dropdown-toggle py-2 px-4"
@@ -138,7 +139,7 @@
             </div>
             <div class="col">
                 <form action="{% url 'products:filter' %}" class="input-group">
-                  <input name="q" type="text" class="form-control" placeholder="Iphone" {% if q %}value="{{q}}"{% endif %} aria-label="">
+                  <input name="q" type="text" class="form-control" placeholder="Искать: Iphone" {% if q %}value="{{q}}"{% endif %} aria-label="">
                   <div class="input-group-append">
                     <input type="submit" class="btn btn-bg-purple arial" value="Найти">
                   </div>
@@ -154,18 +155,35 @@
         {% block content %}{% endblock %}
     </div>
     </div>
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col">
-            <p class="font-weight-light text-right">2024 Техника</p>
-          </div>
-          <div class="col">
-              <p class="font-weight-light text-left">Интернет-магазин <span class="font-italic">techniqueffa</span></p>
-          </div>
+    <footer class="page-footer p-sm-4 px-1">
+        <div class="container">
+            <div class="row mx-auto w-md-75 justify-content-center">
+                <div class="col">
+                    <h4>Контакты</h4>
+                    <div>
+                        <p class="pic pic-phone">{{company_phone}}</p>
+                    </div>
+                    <div>
+                        <p class="pic pic-mail">{{company_email}}</p>
+                    </div>
+                    <div>
+                        <p class="pic pic-address">{{company_address}}</p>
+                    </div>
+                </div>
+                <div class="col col-sm-3">
+                    <h4>Категории</h4>
+                    <ul>
+                    {% for category in footer_categories %}
+                        <a class="text-dark" href="{% url 'products:filter' %}?category={{category.id}}">
+                            <li class="my-2">{{category.title}}</li>
+                        </a>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
+    <script src="{% static 'js/zoom.js' %}"></script>
     <script src="{% static 'js/close_button.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static 'js/categories_tree.js' %}"></script>

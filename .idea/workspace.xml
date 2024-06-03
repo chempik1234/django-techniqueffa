@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="hot fix">
+    <list default="true" id="7d932753-a2bf-4a46-9952-7edd278cbf13" name="Changes" comment="sooo suuus">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/PhonesProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/products/product_list_selectors.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/product_list_selectors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/main_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/main_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/product_bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product_bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/side_lists.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/side_lists.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/products/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/products/context_processors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/static/js/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/static/js/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/static/js/zoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/static/js/zoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/css/layouts.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/css/layouts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/js/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/js/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles/js/zoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles/js/zoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles_build/static/css/layouts.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles_build/static/css/layouts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles_build/static/js/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles_build/static/js/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/staticfiles_build/static/js/zoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/staticfiles_build/static/js/zoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/price.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/price.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhonesProject/templates/products/product_card.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,54 +114,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715269531808</updated>
-    </task>
-    <task id="LOCAL-00006" summary="ready">
-      <option name="closed" value="true" />
-      <created>1716052019013</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1716052019013</updated>
-    </task>
-    <task id="LOCAL-00007" summary="ready for vercel?">
-      <option name="closed" value="true" />
-      <created>1716055801473</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1716055801473</updated>
-    </task>
-    <task id="LOCAL-00008" summary="debug = false">
-      <option name="closed" value="true" />
-      <created>1716056924401</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1716056924401</updated>
-    </task>
-    <task id="LOCAL-00009" summary="vercel config">
-      <option name="closed" value="true" />
-      <created>1716057332962</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1716057332962</updated>
-    </task>
-    <task id="LOCAL-00010" summary="[psycopg2-binary==2.9.9]">
-      <option name="closed" value="true" />
-      <created>1716057472969</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1716057472969</updated>
-    </task>
-    <task id="LOCAL-00011" summary="come on">
-      <option name="closed" value="true" />
-      <created>1716057737915</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1716057737915</updated>
     </task>
     <task id="LOCAL-00012" summary="youtube tutorial">
       <option name="closed" value="true" />
@@ -497,7 +459,55 @@
       <option name="project" value="LOCAL" />
       <updated>1716192558510</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="discount list selector">
+      <option name="closed" value="true" />
+      <created>1716231999687</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1716231999687</updated>
+    </task>
+    <task id="LOCAL-00056" summary="base.html buttons fix (they weren't working and I'm not going to implement them anyway)">
+      <option name="closed" value="true" />
+      <created>1716814631875</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1716814631876</updated>
+    </task>
+    <task id="LOCAL-00057" summary="cart link fixes">
+      <option name="closed" value="true" />
+      <created>1716814748384</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1716814748384</updated>
+    </task>
+    <task id="LOCAL-00058" summary="%{ url link fixes">
+      <option name="closed" value="true" />
+      <created>1716815079744</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1716815079744</updated>
+    </task>
+    <task id="LOCAL-00059" summary="sooo suuus">
+      <option name="closed" value="true" />
+      <created>1717074156154</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1717074156155</updated>
+    </task>
+    <task id="LOCAL-00060" summary="sooo suuus">
+      <option name="closed" value="true" />
+      <created>1717074328674</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1717074328675</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -512,11 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dsakjdhsahdasj!!!!!" />
-    <MESSAGE value="..?" />
-    <MESSAGE value="findstatic" />
-    <MESSAGE value="static" />
-    <MESSAGE value="static WOW" />
     <MESSAGE value="static WOW 2" />
     <MESSAGE value="test" />
     <MESSAGE value="????" />
@@ -537,6 +542,11 @@
     <MESSAGE value="too sus" />
     <MESSAGE value="html fix?" />
     <MESSAGE value="hot fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="hot fix" />
+    <MESSAGE value="discount list selector" />
+    <MESSAGE value="base.html buttons fix (they weren't working and I'm not going to implement them anyway)" />
+    <MESSAGE value="cart link fixes" />
+    <MESSAGE value="%{ url link fixes" />
+    <MESSAGE value="sooo suuus" />
+    <option name="LAST_COMMIT_MESSAGE" value="sooo suuus" />
   </component>
 </project>

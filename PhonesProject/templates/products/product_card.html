@@ -7,32 +7,34 @@
     </a>
   {% endif %}
     <div class="left-top flex-column">
-      <button type="button" class="btn-bg-purple border-0 rounded-circle" data-toggle="modal" data-target="#exampleModalCentered">
+      <button type="button" class="btn-bg-purple border-0 rounded-circle" data-toggle="modal" data-target="#modal{{product.pk}}">
         <span class="arial lh-2 pic-button d-block">👁</span>
       </button>
       {% if product.actual_price < product.base_price %}<span class="btn-bg-purple p-1">Распродажа</span>{% endif %}
     </div>
 
     <!-- Modal -->
-    <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+    <div class="modal" id="modal{{product.pk}}" tabindex="-1" role="dialog" aria-labelledby="modal{{product.pk}}Label" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered mw-md-75" role="document">
-        <div class="modal-content">
-          {% include 'products/details.html' with product=product %}
+        <div class="modal-content w-md-75 mx-auto border-0">
+          {% include 'products/details.html' with product=product modal=True %}
         </div>
       </div>
     </div>
   </div>
 
-  <div class="card-body">
-    <a class="card-title text-dark text-decoration-none" href="{% url 'products:product' product.id %}">
-      <h4 class="card-title">{{product.title}}</h4>
-    </a>
-    {% include 'products/rate.html' with product=product %}
-    <div class="d-flex flex-column ml-auto mr-0 justify-content-end">
-      {% include 'products/price.html' with product=product %}
-    </div>
-    <div class="mt-1">
-      {% include 'cart/add_form.html' with pk=product.pk %}
+  <div class="card-body d-flex">
+    <div class="mb-0 mt-auto">
+      <a class="card-title text-dark text-decoration-none" href="{% url 'products:product' product.id %}">
+        <h4 class="card-title">{{product.title}}</h4>
+      </a>
+      {% include 'products/rate.html' with product=product %}
+      <div class="d-flex flex-column ml-auto mr-0 justify-content-end">
+        {% include 'products/price.html' with product=product %}
+      </div>
+      <div class="mt-1">
+        {% include 'cart/add_form.html' with pk=product.pk %}
+      </div>
     </div>
   </div>
 

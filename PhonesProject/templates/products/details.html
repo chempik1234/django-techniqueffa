@@ -1,40 +1,43 @@
 {% load static %}
-<div class="d-md-inline-flex d-block">
+<div class="d-md-inline-flex d-block" id="details{{product.pk}}">
     <div class="product-image-gallery">
       <div class="image-zoom-container bg-light">
           <img id="main-image-{{product.pk}}" class="main-image" src="" alt="Main Product Image"/>
       </div>
       <div class="thumbnails-{{product.pk}}"></div>
-      <script src="{% static 'js/zoom.js' %}"></script>
       <script>
-          const mainImage = document.getElementById('main-image-{{product.pk}}');
-          const thumbnailsContainer = document.querySelector('.thumbnails-{{product.pk}}');
-          const productImages = {{ product.product_images|safe }};
+          const mainImage{{product.pk}} = document.getElementById('main-image-{{product.pk}}');
+          const thumbnailsContainer{{product.pk}} = document.querySelector('.thumbnails-{{product.pk}}');
+          const productImages{{product.pk}} = {{ product.product_images|safe }};
+          const detailsRoot{{product.pk}} = document.getElementById('details{{product.pk}}');
+          const zoomContainer{{product.pk}} = detailsRoot{{product.pk}}.querySelector('.image-zoom-container');
 
-          function updateMainImage(imageUrl) {
-            mainImage.src = imageUrl;
-            mainImage.style.width = zoomContainer.clientWidth + 'px';
+          function updateMainImage{{product.pk}}(imageUrl) {
+            mainImage{{product.pk}}.src = imageUrl;
+            mainImage{{product.pk}}.style.width = zoomContainer{{product.pk}}.clientWidth + 'px';
           }
 
-          productImages.forEach(image_element => {
-            const thumbnail = document.createElement('img');
-            thumbnail.src = image_element.image;
-            thumbnail.classList.add('thumbnail');
-            thumbnail.addEventListener('click', () => {
-              updateMainImage(image_element.image);
+          productImages{{product.pk}}.forEach(image_element => {
+            const thumbnail{{product.pk}} = document.createElement('img');
+            thumbnail{{product.pk}}.src = image_element.image;
+            thumbnail{{product.pk}}.classList.add('thumbnail');
+            thumbnail{{product.pk}}.addEventListener('click', () => {
+              updateMainImage{{product.pk}}(image_element.image);
             });
-            thumbnailsContainer.appendChild(thumbnail);
+            thumbnailsContainer{{product.pk}}.appendChild(thumbnail{{product.pk}});
           });
-
-          if (productImages.length > 0) {
-            updateMainImage(productImages[0].image);
+          if (productImages{{product.pk}}.length > 0){
+            updateMainImage{{product.pk}}(productImages{{product.pk}}[0].image);
           }
       </script>
     </div>
-    <div class="d-column mx-2">
-        <h4 class="text-uppercase font-weight-light">{{product.title}}</h4>
+    <div class="d-column mx-2 p-3">
+        <h3 class="text-uppercase font-weight-light">{{product.title}}</h3>
+        <p class="mb-5 text-secondary">Категория: {{product.category}}</p>
+        <div class="d-flex">
         {% include 'products/price.html' with product=product %}
+        </div>
         {% include 'cart/add_form.html' with pk=product.pk %}
-        <p class="py-5">Категория: {{product.category}}</p>
+        {% if modal %}<p class="mt-5 text-justify">{{product.description}}</p>{% endif %}
     </div>
 </div>
